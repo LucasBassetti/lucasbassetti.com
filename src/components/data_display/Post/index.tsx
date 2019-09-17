@@ -1,4 +1,5 @@
 import React from 'react'
+import Comments from '../Comments'
 import * as S from './styled'
 
 const Post = ({ post }: any) => {
@@ -14,6 +15,7 @@ const Post = ({ post }: any) => {
       <S.MainContent>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </S.MainContent>
+      <Comments slug={post.fields.slug} title={post.frontmatter.title} />
     </>
   )
 }

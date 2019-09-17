@@ -35,7 +35,11 @@ const Projects = ({ projects }: IProps) => {
           />
         ))}
       </div>
-      <S.ProjectsGithubLink>
+      <S.ProjectsGithubLink
+        href="https://github.com/LucasBassetti"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <S.ProjectsGithubIcon size={24} /> Check all
       </S.ProjectsGithubLink>
     </>

@@ -7,6 +7,9 @@ import Post from '../components/data_display/Post'
 interface IProps {
   data: {
     markdownRemark: {
+      fields: {
+        slug: string
+      }
       frontmatter: {
         date: string
         description: string
@@ -35,6 +38,9 @@ const BlogPost = ({ data }: IProps) => {
 export const query = graphql`
   query Post($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
+      fields {
+        slug
+      }
       frontmatter {
         date(locale: "en", formatString: "LL")
         description
