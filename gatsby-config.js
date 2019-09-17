@@ -17,14 +17,14 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/assets/images`,
+        path: `${__dirname}/static/assets/images`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `fonts`,
-        path: `${__dirname}/src/assets/fonts`,
+        path: `${__dirname}/static/assets/fonts`,
       },
     },
     {
@@ -78,7 +78,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/assets/images/icon.png`, // This path is relative to the root of the site.
+        icon: `static/assets/images/icon.png`, // This path is relative to the root of the site.
       },
     },
     {
@@ -88,6 +88,7 @@ module.exports = {
         ...githubQueryOptions,
       },
     },
+    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-preact`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-typescript`,
