@@ -28,11 +28,11 @@ export const ProjectItemWrapper = styled.a`
     width: 100%;
 
     &:nth-child(odd) {
-      margin-left: 0;
+      margin-right: 0;
     }
 
     &:nth-child(even) {
-      margin-right: 0;
+      margin-left: 0;
     }
   `}
 `
