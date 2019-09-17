@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react'
 import * as S from './styled'
 
 const ThemeSwitch = () => {
-  const [theme, setTheme] = useState<string>(window.__theme || 'dark')
+  const [theme, setTheme] = useState<string>(
+    typeof window !== 'undefined' && window.__theme ? window.__theme : 'dark'
+  )
 
   const isDarkMode: boolean = theme === 'dark'
 
