@@ -42,29 +42,47 @@ export const ExperienceItemContentHeader = styled.div`
 export const ExperienceItemPosition = styled.h2`
   font-size: 1.5rem;
   margin: 0;
+
+  ${media.lessThan('medium')`
+    font-size: 1.2rem;
+  `};
 `
 
 export const ExperienceItemDate = styled.time`
   font-size: 1rem;
   font-weight: 100;
   opacity: 0.8;
+
+  ${media.lessThan('medium')`
+    font-size: 0.8rem;
+  `};
 `
 
 export const ExperienceCompany = styled.a`
   color: var(--texts);
   font-size: 1.2rem;
   font-weight: 200;
+
+  ${media.lessThan('medium')`
+    margin-top: 0.5rem;
+    font-size: 1rem;
+  `};
 `
 
 export const ExperienceItemTech = styled.p`
   margin: 1rem 0 0;
+
+  ${media.lessThan('medium')`
+    margin-top: 0.5rem;
+  `};
 `
 
 export const ExperienceItemTechItem = styled.span`
   background: var(--highlight);
   color: var(--background);
+  display: inline-block;
   font-size: 0.8rem;
   font-weight: bold;
-  margin: 0.5rem 0.5rem 0.5rem 0;
-  padding: 0.5rem;
+  margin: 0.5rem 0.5rem 0 0;
+  padding: 0.2rem 0.5rem;
 `
