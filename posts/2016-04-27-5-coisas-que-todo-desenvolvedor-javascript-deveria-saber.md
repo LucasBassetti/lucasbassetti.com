@@ -1,7 +1,10 @@
 ---
-date: 2016-04-27 10:00:00 -0300
 title: 5 coisas que todo desenvolvedor JavaScript deveria saber
-description: A cada dia que passa novos frameworks JavaScript são lançados fazendo com que muitas pessoas negligenciem conceitos básicos da linguagem.
+description: >-
+  A cada dia que passa novos frameworks JavaScript são lançados fazendo com que
+  muitas pessoas negligenciem conceitos básicos da linguagem.
+date: '2016-04-27 10:00:00 -0300'
+thumbnail: /assets/img/javascript.jpg
 category: JS
 ---
 
