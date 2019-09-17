@@ -2,8 +2,7 @@ backend:
   name: github
   repo: LucasBassetti/lucasbassetti.com
   branch: master
-  site_domain: https://lucasbassetti.com/
-  base_url: https://api.netlify.com
+  site_domain: lucasbassetti.com
 
 publish_mode: editorial_workflow
 media_folder: "static/assets/img"
