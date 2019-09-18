@@ -6,8 +6,6 @@ description: A cada dia que passa novos frameworks JavaScript são lançados faz
 tags: ['javascript']
 ---
 
-![JavaScript](images/posts/javascript.jpg)
-
 ### Introdução
 
 A cada dia que passa novos frameworks JavaScript são lançados fazendo com que muitas pessoas (inclusive eu) negligenciem conceitos básicos da linguagem. Como parte do meu estudo, resolvi fazer esse "resumão" de alguns conceitos que considero fundamentais para um desenvolvedor JavaScript.
