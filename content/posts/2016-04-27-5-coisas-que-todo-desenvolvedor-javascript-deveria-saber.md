@@ -6,6 +6,8 @@ description: A cada dia que passa novos frameworks JavaScript são lançados faz
 tags: ['javascript']
 ---
 
+import ProfileIntro from '@components/data_display/ProfileIntro'
+
 ### Introdução
 
 A cada dia que passa novos frameworks JavaScript são lançados fazendo com que muitas pessoas (inclusive eu) negligenciem conceitos básicos da linguagem. Como parte do meu estudo, resolvi fazer esse "resumão" de alguns conceitos que considero fundamentais para um desenvolvedor JavaScript.
@@ -110,3 +112,5 @@ Protótipo representa uma forma conveniente de definirmos tipos de objetos. Ele 
 
 1. RESIG, John; BIBEAULT, Bear. **Secrets of the JavaScript Ninja**. Manning, 2013.
 2. STEFANOV, Stoyan. **Object-Oriented JavaScript**. Packt Publishing Ltd, 2008.
+
+<ProfileIntro />

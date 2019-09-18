@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import * as S from './styled'
 
-const ProfilePhoto = () => {
+const ProfileIntro = () => {
   const { avatarImage } = useStaticQuery(
     graphql`
       query {
@@ -24,7 +24,7 @@ const ProfilePhoto = () => {
         <Img fluid={avatarImage.childImageSharp.fluid} />
       </S.ProfileIntroPhoto>
       <S.ProfileIntroText>
-        <h1>Hi, I'm Lucas!</h1>
+        <S.ProfileIntroName>Hi, I'm Lucas!</S.ProfileIntroName>
         <p>
           I'm a Mobile and Front-end Developer that loves open-source and
           discovering new technologies. I have been working with web since 2011.
@@ -43,4 +43,4 @@ const ProfilePhoto = () => {
   )
 }
 
-export default ProfilePhoto
+export default ProfileIntro

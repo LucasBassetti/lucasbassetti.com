@@ -42,13 +42,15 @@ export const ProfileIntroText = styled.div`
     margin: 2rem 0 0;
   `}
 
-  h1 {
-    ${T.Title}
-  }
-
   p {
     ${T.Text1}
 
     margin-top: ${V.Space.sm}
   }
+`
+
+export const ProfileIntroName = styled.h1`
+  ${T.Title}
+
+  margin-top: 0 !important;
 `

@@ -8,13 +8,10 @@ import ProjectItem from '../components/data_display/ProjectItem'
 import Recents from '../components/data_display/Recents'
 
 const IndexPage = () => {
-  const { allMarkdownRemark, githubData } = useStaticQuery(
+  const { allMdx, githubData } = useStaticQuery(
     graphql`
       query {
-        allMarkdownRemark(
-          sort: { fields: frontmatter___date, order: DESC }
-          limit: 3
-        ) {
+        allMdx(sort: { fields: frontmatter___date, order: DESC }, limit: 3) {
           edges {
             node {
               fields {
@@ -53,10 +50,14 @@ const IndexPage = () => {
     `
   )
 
-  const posts = allMarkdownRemark.edges
+  console.log(allMdx)
+
+  const posts = allMdx.edges
   const projects = githubData.data.user.repositories.edges
     .slice(0, 4)
     .map(({ node }: any) => node)
+
+  console.log(posts)
 
   return (
     <Layout>

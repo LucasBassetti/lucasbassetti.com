@@ -17,6 +17,7 @@ interface IProps {
   title: string
 }
 
+// tslint:disable-next-line: function-name
 function SEO({
   description = '',
   image,

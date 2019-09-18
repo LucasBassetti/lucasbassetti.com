@@ -7,7 +7,7 @@ import Post from '@components/data_display/Post'
 
 interface IProps {
   data: {
-    markdownRemark: {
+    mdx: {
       fields: {
         slug: string
       }
@@ -21,13 +21,13 @@ interface IProps {
         title: string
         timeToRead: number
       }
-      html: string
+      body: any
     }
   }
 }
 
 const BlogPost = ({ data }: IProps) => {
-  const post = data.markdownRemark
+  const post = data.mdx
 
   return (
     <Layout>
@@ -43,7 +43,7 @@ const BlogPost = ({ data }: IProps) => {
 
 export const query = graphql`
   query Post($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    mdx(fields: { slug: { eq: $slug } }) {
       fields {
         slug
       }
@@ -61,7 +61,7 @@ export const query = graphql`
         }
       }
       timeToRead
-      html
+      body
     }
   }
 `

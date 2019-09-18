@@ -1,4 +1,5 @@
 import React from 'react'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import Comments from '../Comments'
 import * as S from './styled'
@@ -25,7 +26,8 @@ const Post = ({ post }: any) => {
         <S.PostDescription>{post.frontmatter.description}</S.PostDescription>
       </S.PostHeader>
       <S.MainContent>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <MDXRenderer>{post.body}</MDXRenderer>
+        {/* <div dangerouslySetInnerHTML={{ __html: post.html }} /> */}
         <S.PostPullRequestWrapper>
           <h2>Something Missing?</h2>
           <p>

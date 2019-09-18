@@ -9,7 +9,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   fmImagesToRelative(node)
 
   // Ensures we are processing only markdown files
-  if (node.internal.type === 'MarkdownRemark') {
+  if (['MarkdownRemark', 'Mdx'].includes(node.internal.type)) {
     // Use `createFilePath` to turn markdown files in our `data/faqs` directory into `/faqs/slug`
     const slug = createFilePath({
       node,
@@ -36,7 +36,7 @@ exports.createPages = ({ graphql, actions }) => {
   return graphql(
     `
       {
-        allMarkdownRemark {
+        allMdx {
           edges {
             node {
               fields {
@@ -53,7 +53,7 @@ exports.createPages = ({ graphql, actions }) => {
     }
 
     // Create blog post pages.
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    result.data.allMdx.edges.forEach(({ node }) => {
       createPage({
         // Path for this page — required
         path: `blog/${node.fields.slug}`,
