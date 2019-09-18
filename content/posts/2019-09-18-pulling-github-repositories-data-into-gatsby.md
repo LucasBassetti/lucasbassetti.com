@@ -4,15 +4,16 @@ description: >-
   Add your open source projects to Gatsby using the gatsby-source-github-api
   package
 date: '2019-09-18 02:16:20'
-thumbnail: /assets/gatsby.jpg
+image: /assets/gatsby.jpg
 tags:
   - gatsbyjs
   - github
   - javascript
 ---
+
 ## Introduction
 
-In this post we will learn how to pull Github repositories into Gatsby-based website using the [gatsby-source-github-api](https://www.gatsbyjs.org/packages/gatsby-source-github-api/). 
+In this post we will learn how to pull Github repositories into Gatsby-based website using the [gatsby-source-github-api](https://www.gatsbyjs.org/packages/gatsby-source-github-api/).
 
 ## Configuring the plugin
 
