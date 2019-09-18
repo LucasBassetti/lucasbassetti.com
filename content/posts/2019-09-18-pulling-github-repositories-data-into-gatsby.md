@@ -17,19 +17,17 @@ In this post we will learn how to pull Github repositories into Gatsby-based web
 
 ## Configuring the plugin
 
-The first step is install the plugin in your project with the npm command:
+The first step is adding the plugin as a dependency:
 
 ```
 npm i gatsby-source-github-api --save
-```
 
-For yarn users you can use:
+# or
 
-```
 yarn gatsby-source-github-api
 ```
 
-After that you need add the plugin in the `gatsby-config.js` file like so:
+Then, configure the plugin in the `gatsby-config.js` file:
 
 ```
 // In your gatsby-config.js

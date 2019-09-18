@@ -150,6 +150,10 @@ export const MainContent = styled.section`
     padding: 0 1.875rem;
   }
 
+  pre {
+    margin: 0 auto 1.6rem;
+  }
+
   hr {
     border: 1px solid var(--borderColor);
     margin: 3rem auto;

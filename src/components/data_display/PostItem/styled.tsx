@@ -7,10 +7,7 @@ import * as V from '@styles/variables'
 
 export const PostItemWrapper = styled(AniLink)`
   display: block;
-
-  &:not(:last-child) {
-    margin-bottom: ${V.Space.xs};
-  }
+  margin-bottom: ${V.Space.xs};
 `
 
 export const PostItemCategory = styled.div`
