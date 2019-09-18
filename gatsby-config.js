@@ -9,7 +9,7 @@ module.exports = {
     description:
       'Front-end Developer passionate about new technologies. Currently work remotely at YachtLife, the #1 Yacht Brokerage Company.',
     position: 'Front-end Developer',
-    author: `Lucas Bassetti`,
+    author: `@lucasbassetti`,
     siteUrl: `https://lucasbassetti.com/`,
   },
   plugins: [
