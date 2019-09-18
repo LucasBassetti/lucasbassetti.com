@@ -133,12 +133,7 @@ module.exports = {
         extensions: ['js'],
       },
     },
-    {
-      resolve: `gatsby-plugin-netlify-cms`,
-      options: {
-        modulePath: `${__dirname}/src/cms/cms.js`,
-      },
-    },
+    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-preact`,
     `gatsby-plugin-styled-components`,
