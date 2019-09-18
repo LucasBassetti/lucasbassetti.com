@@ -1,13 +1,42 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
+import Img from 'gatsby-image'
 
 import * as T from '@styles/typography'
 import * as V from '@styles/variables'
 
+export const PostCoverImage = styled(Img).attrs({
+  alt: 'Introduction Image',
+  'aria-hidden': 'true',
+})`
+  display: block;
+  height: 25vh;
+  left: calc(-50vw + 50%);
+  margin-top: -4px;
+  object-fit: cover;
+  position: relative;
+  width: 100vw;
+
+  &:not(:last-child) {
+    margin-bottom: ${V.Space.default};
+  }
+
+  &:after {
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: ${V.ZIndex.default};
+  }
+`
+
 export const PostHeader = styled.header`
   color: var(--primaryColor);
   margin: auto;
-  padding: 5rem 0 0;
+  padding: 1rem 0 0;
 
   ${media.lessThan('large')`
     padding: 3rem 0 0;
@@ -47,7 +76,6 @@ export const PostPullRequestTitle = styled.h2`
 
 export const MainContent = styled.section`
   margin: auto;
-  padding: 2rem 0;
 
   ${media.lessThan('large')`
     padding: 2rem 0;
@@ -203,17 +231,12 @@ export const MainContent = styled.section`
   }
 
   a {
-    border-bottom: 1px dashed var(--highlightColor);
     color: var(--highlightColor);
     text-decoration: none;
     transition: opacity 0.5s;
 
     svg {
       color: var(--primaryColor);
-    }
-
-    &:hover {
-      opacity: 0.8;
     }
   }
 `
