@@ -11,7 +11,10 @@ const IndexPage = () => {
   const { allMarkdownRemark, githubData } = useStaticQuery(
     graphql`
       query {
-        allMarkdownRemark(limit: 3) {
+        allMarkdownRemark(
+          sort: { fields: frontmatter___date, order: DESC }
+          limit: 3
+        ) {
           edges {
             node {
               fields {

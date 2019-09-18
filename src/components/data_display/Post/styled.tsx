@@ -66,6 +66,7 @@ export const PostDate = styled.p`
 
 export const PostPullRequestWrapper = styled.div`
   border-top: 1px solid var(--borderColor);
+  margin-top: ${V.Space.default};
 `
 
 export const PostPullRequestTitle = styled.h2`
