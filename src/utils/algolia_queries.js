@@ -12,7 +12,6 @@ const postQuery = `{
           date_timestamp: date
           date(locale: "en", formatString: "LL")
           description
-          image
         }
         timeToRead,
         excerpt(pruneLength: 5000)
