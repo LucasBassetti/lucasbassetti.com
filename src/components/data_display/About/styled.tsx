@@ -1,7 +1,14 @@
 import styled from 'styled-components'
 
-export const AboutWrapper = styled.div``
+import * as T from '@styles/typography'
+import * as V from '@styles/variables'
+
+export const AboutWrapper = styled.div`
+  padding-top: ${V.Space.sm};
+`
 
 export const AboutTitle = styled.h2`
-  margin-top: 3rem;
+  ${T.Subtitle1}
+  
+  margin: ${V.Space.default} 0 ${V.Space.sm};
 `

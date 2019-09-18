@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 
 export const PostHeader = styled.header`
-  color: var(--texts);
+  color: var(--primaryColor);
   margin: auto;
   padding: 5rem 0 0;
 
@@ -13,8 +13,8 @@ export const PostHeader = styled.header`
 
 export const PostTitle = styled.h1`
   font-size: 4rem;
-  line-height: 1.2;
   font-weight: 700;
+  line-height: 1.2;
   margin: 1rem auto;
 
   ${media.lessThan('large')`
@@ -56,7 +56,7 @@ export const MainContent = styled.section`
   .tags,
   iframe,
   .button-post {
-    color: var(--texts);
+    color: var(--primaryColor);
     font-size: 1.25rem;
     font-weight: 300;
     line-height: 1.7;
@@ -82,8 +82,8 @@ export const MainContent = styled.section`
   ul,
   ol {
     list-style: disc;
-    padding-left: 2.5rem;
     margin: 0 auto 1.6rem;
+    padding-left: 2.5rem;
   }
 
   li {
@@ -116,14 +116,14 @@ export const MainContent = styled.section`
   }
 
   blockquote {
-    color: var(--texts);
-    border-left: 0.3rem solid var(--highlight);
-    padding: 0 1.875rem;
+    border-left: 0.3rem solid var(--highlightColor);
+    color: var(--primaryColor);
     margin: 3.125rem auto;
+    padding: 0 1.875rem;
   }
 
   hr {
-    border: 1px solid var(--borders);
+    border: 1px solid var(--borderColor);
     margin: 3rem auto;
   }
 
@@ -180,8 +180,8 @@ export const MainContent = styled.section`
   }
 
   .gatsby-resp-image-background-image {
-    z-index: 2;
     opacity: 1 !important;
+    z-index: 2;
   }
 
   .gatsby-resp-image-image {
@@ -203,13 +203,13 @@ export const MainContent = styled.section`
   }
 
   a {
-    border-bottom: 1px dashed var(--highlight);
-    color: var(--highlight);
+    border-bottom: 1px dashed var(--highlightColor);
+    color: var(--highlightColor);
     text-decoration: none;
     transition: opacity 0.5s;
 
     svg {
-      color: var(--texts);
+      color: var(--primaryColor);
     }
 
     &:hover {

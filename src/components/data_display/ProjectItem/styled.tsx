@@ -1,27 +1,27 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
+import * as T from '@styles/typography'
+import * as V from '@styles/variables'
+
 export const ProjectItemWrapper = styled.a`
-  border: 1px solid var(--borders);
-  color: var(--texts);
   display: inline-flex;
   flex-direction: column;
   height: 200px;
-  margin: 1rem 0 0;
-  padding: 1rem;
-  width: calc(50% - 0.5rem);
+  margin: 0 0 ${V.Space.xs};
+  width: calc(50% - ${V.Space.xxs});
 
   &:nth-child(odd) {
-    margin-right: 0.5rem;
+    margin-right: ${V.Space.xxs};
   }
 
   &:nth-child(even) {
-    margin-left: 0.5rem;
+    margin-left: ${V.Space.xxs};
   }
 
   &:hover {
-    border-color: var(--texts);
-    color: var(--texts);
+    border-color: var(--primaryColor);
+    color: var(--primaryColor);
   }
 
   ${media.lessThan('medium')`
@@ -38,18 +38,17 @@ export const ProjectItemWrapper = styled.a`
 `
 
 export const ProjectItemName = styled.h2`
-  font-size: 1.4rem;
-  margin: 0;
+  ${T.Heading4}
 `
 
 export const ProjectItemStatsWrapper = styled.div`
   display: flex;
-  margin: 0.5rem 0;
+  margin: ${V.Space.xxs} 0;
 `
 
 export const ProjectItemStatsItem = styled.div`
   align-items: center;
-  border: 1px solid var(--borders);
+  border: 1px solid var(--borderColor);
   display: flex;
   justify-content: space-between;
   margin-right: 0.5rem;
@@ -61,6 +60,5 @@ export const ProjectItemStatsValue = styled.span`
 `
 
 export const ProjectItemDescription = styled.p`
-  font-size: 1.2rem;
-  margin: 0;
+  ${T.Subtitle3}
 `

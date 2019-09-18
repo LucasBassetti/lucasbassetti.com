@@ -1,34 +1,28 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import media from 'styled-media-query'
-import { Link } from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
-const showBorder = keyframes`
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
-`
+import * as T from '@styles/typography'
+import * as V from '@styles/variables'
 
 export const HeaderWrapper = styled.header`
   align-items: center;
-  background: var(--background);
-  border-bottom: 1px solid var(--borders);
+  background: var(--bg);
+  border-bottom: 1px solid var(--borderColor);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   left: 0;
   position: fixed;
   top: 0;
-  transition: transform 0.3s ease;
   transform: translateY(0);
+  transition: transform 0.3s ease;
   width: 100%;
   z-index: 999;
 
   &.headroom {
-    will-change: transform;
     transition: transform 0.2s linear;
+    will-change: transform;
   }
 
   &.headroom--pinned {
@@ -48,8 +42,8 @@ export const HeaderBlock = styled.div`
 
   ${media.lessThan('medium')`
     &:nth-child(2) {
-      border-top: 1px solid var(--borders);
-      background: var(--mediumBackground);
+      border-top: 1px solid var(--borderColor);
+      background: var(--bgSolid);
       order: 2
       width: 100%;
     }
@@ -58,15 +52,15 @@ export const HeaderBlock = styled.div`
 
 export const HeaderProfileWrapper = styled.div`
   left: 0;
-  top: 0;
   position: absolute;
+  top: 0;
   transform: translateY(100%);
   transition: transform 0.1s ease;
 `
 
-export const HeaderLogo = styled(Link)`
+export const HeaderLogo = styled(AniLink)`
   align-items: center;
-  background: var(--texts);
+  background: var(--primaryColor);
   display: flex;
   height: 32px;
   justify-content: center;
@@ -83,40 +77,20 @@ export const HeaderLogo = styled(Link)`
   }
 `
 
-export const HeaderLink = styled(Link)`
-  color: var(--texts);
-  margin: 0 1rem;
+export const HeaderLink = styled(AniLink)`
+  color: var(--secondaryColor);
+  font-size: 1rem;
+  margin: 0 ${V.Space.sm};
   position: relative;
-  opacity: 0.9;
-  font-weight: 100;
+
+  ${T.LinkTransition}
 
   &:hover {
-    color: var(--texts);
-
-    &::before {
-      animation: ${showBorder} 0.2s ease forwards;
-      background: var(--texts);
-      bottom: -0.375rem;
-      content: '';
-      height: 1px;
-      left: 0;
-      right: 0;
-      position: absolute;
-      margin: auto;
-    }
+    color: var(--highlightColor);
   }
 
   &.active {
-    &::before {
-      animation: none;
-      background: var(--texts);
-      bottom: -0.375rem;
-      content: '';
-      height: 1px;
-      left: 0;
-      position: absolute;
-      width: 100%;
-    }
+    color: var(--highlightColor);
   }
 
   ${media.lessThan('medium')`
@@ -125,6 +99,6 @@ export const HeaderLink = styled(Link)`
 `
 
 export const HeaderSocialLink = styled.a`
-  color: var(--texts);
+  color: var(--primaryColor);
   margin-left: 0.75rem;
 `

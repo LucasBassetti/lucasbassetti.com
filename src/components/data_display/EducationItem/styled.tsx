@@ -1,29 +1,26 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
+import * as V from '@styles/variables'
+
 export const EducationItemWrapper = styled.a`
   align-items: center;
-  border: 1px solid var(--borders);
-  color: var(--texts);
+  color: var(--primaryColor);
   display: inline-flex;
-  flex-direction: column;
-  justify-content: 'center';
-  /* height: 200px; */
-  margin: 1rem 0 0;
-  padding: 1rem;
-  width: calc(50% - 0.5rem);
+  margin: 0 0 ${V.Space.xs};
+  width: calc(50% - ${V.Space.xxs});
 
   &:nth-child(odd) {
-    margin-right: 0.5rem;
+    margin-right: ${V.Space.xxs};
   }
 
   &:nth-child(even) {
-    margin-left: 0.5rem;
+    margin-left: ${V.Space.xxs};
   }
 
   &:hover {
-    border-color: var(--texts);
-    color: var(--texts);
+    border-color: var(--primaryColor);
+    color: var(--primaryColor);
   }
 
   ${media.lessThan('medium')`
@@ -37,6 +34,14 @@ export const EducationItemWrapper = styled.a`
       margin-right: 0;
     }
   `}
+`
+
+export const EducationItemContainer = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
 `
 
 export const EducationItemUniversity = styled.h3`
@@ -57,9 +62,7 @@ export const EducationItemDegree = styled.h2`
 `
 
 export const EducationItemDate = styled.time`
-  margin-top: 1rem;
   font-size: 1.3rem;
   font-weight: 400;
+  margin-top: 1rem;
 `
-
-export const EducationItemThesis = styled.a``

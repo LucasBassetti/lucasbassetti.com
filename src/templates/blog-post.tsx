@@ -13,6 +13,7 @@ interface IProps {
       frontmatter: {
         date: string
         description: string
+        image: any
         title: string
         timeToRead: number
       }
@@ -23,6 +24,8 @@ interface IProps {
 
 const BlogPost = ({ data }: IProps) => {
   const post = data.markdownRemark
+
+  console.log(post)
 
   return (
     <Layout>
@@ -44,6 +47,7 @@ export const query = graphql`
       frontmatter {
         date(locale: "en", formatString: "LL")
         description
+        image
         title
       }
       timeToRead

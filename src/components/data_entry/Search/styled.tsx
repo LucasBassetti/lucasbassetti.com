@@ -1,11 +1,13 @@
 import styled from 'styled-components'
 
+import * as V from '@styles/variables'
+
 export const SearchWrapper = styled.section`
-  background: var(--background);
+  background: var(--bg);
   display: flex;
   flex-direction: column;
-  width: 100%;
   transition: opacity 0.4s;
+  width: 100%;
 
   .ais-InstantSearch__root {
     display: flex;
@@ -15,19 +17,12 @@ export const SearchWrapper = styled.section`
   }
 
   .ais-SearchBox {
-    padding: 0.5rem 0;
-  }
-
-  .ais-Stats {
-    padding-bottom: 1rem;
-  }
-
-  .ais-SearchBox {
-    padding-top: 3rem;
+    padding: ${V.Space.default} 0 0;
   }
 
   .ais-Stats {
     color: #9e9e9e;
+    padding: ${V.Space.xxs} 0 ${V.Space.sm};
   }
 
   .ais-SearchBox-form {
@@ -38,9 +33,9 @@ export const SearchWrapper = styled.section`
     appearance: none;
     background: none;
     border: 0;
+    border-bottom: 1px solid var(--borderColor);
     border-radius: 0;
-    border-bottom: 1px solid var(--borders);
-    color: var(--texts);
+    color: var(--primaryColor);
     display: flex;
     font-size: 1.6rem;
     outline: none;

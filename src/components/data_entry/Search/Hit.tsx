@@ -3,20 +3,20 @@ import PostItem from '../../data_display/PostItem'
 
 interface IProps {
   hit: {
-    category: 'TS' | 'JS' | 'CSS' | 'MISC'
     date: string
     description: string
     slug: string
+    tags: string[]
     timeToRead: number
     title: string
   }
 }
 
 const Hit = ({
-  hit: { category, date, description, slug, timeToRead, title },
+  hit: { date, description, slug, tags, timeToRead, title },
 }: IProps) => (
   <PostItem
-    category={category}
+    tags={tags}
     date={date}
     description={description}
     slug={slug}

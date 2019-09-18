@@ -1,4 +1,6 @@
 import React from 'react'
+import { getActiveTheme } from '@utils/themes'
+
 import * as S from './styled'
 
 interface IProps {
@@ -11,7 +13,14 @@ const Recents = ({ itemsComponent, title, url }: IProps) => (
   <S.RecentsWrapper>
     <S.RecentsHeader>
       <S.RecentsTitle>{title}</S.RecentsTitle>
-      <S.RecentsLink to={url}>Show all</S.RecentsLink>
+      <S.RecentsLink
+        to={url}
+        bg={getActiveTheme()}
+        cover={true}
+        direction="down"
+      >
+        Show all
+      </S.RecentsLink>
     </S.RecentsHeader>
     <div>{itemsComponent}</div>
   </S.RecentsWrapper>

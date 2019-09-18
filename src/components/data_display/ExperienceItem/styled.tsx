@@ -1,24 +1,33 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 import Img from 'gatsby-image'
+import { Stack } from 'styled-icons/icomoon/Stack'
 
-export const ExperienceItemWrapper = styled.div`
-  border-bottom: 1px solid var(--borders);
-  color: var(--texts);
-  display: flex;
-  padding: 1rem 0;
+import * as T from '@styles/typography'
+import * as V from '@styles/variables'
+
+export const ExperienceItem = styled.a`
+  display: block;
+
+  &:not(:last-child) {
+    margin-bottom: ${V.Space.xs};
+  }
 
   ${media.lessThan('medium')`
     flex-direction: column;
   `}
 `
 
+export const ExperienceItemWrapper = styled.div`
+  display: flex;
+`
+
 export const ExperienceItemImage = styled(Img)`
-  border: 1px solid var(--borders);
+  border: 1px solid var(--borderColor);
 
   ${media.lessThan('medium')`
     display: none !important;
-  `};
+  `}
 `
 
 export const ExperienceItemContent = styled.div`
@@ -40,49 +49,33 @@ export const ExperienceItemContentHeader = styled.div`
 `
 
 export const ExperienceItemPosition = styled.h2`
-  font-size: 1.5rem;
-  margin: 0;
-
-  ${media.lessThan('medium')`
-    font-size: 1.2rem;
-  `};
+  ${T.Heading2}
 `
 
 export const ExperienceItemDate = styled.time`
+  color: var(--secondaryColor);
   font-size: 1rem;
   font-weight: 100;
-  opacity: 0.8;
-
-  ${media.lessThan('medium')`
-    font-size: 0.8rem;
-  `};
 `
 
-export const ExperienceCompany = styled.a`
-  color: var(--texts);
+export const ExperienceCompany = styled.span`
+  color: var(--secondaryColor);
   font-size: 1.2rem;
-  font-weight: 200;
-
-  ${media.lessThan('medium')`
-    margin-top: 0.5rem;
-    font-size: 1rem;
-  `};
+  margin-top: 0.2rem;
 `
 
 export const ExperienceItemTech = styled.p`
-  margin: 1rem 0 0;
+  align-items: center;
+  display: flex;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-top: ${V.Space.sm};
 
   ${media.lessThan('medium')`
-    margin-top: 0.5rem;
+    margin-top: ${V.Space.sm};
   `};
 `
 
-export const ExperienceItemTechItem = styled.span`
-  background: var(--highlight);
-  color: var(--background);
-  display: inline-block;
-  font-size: 0.8rem;
-  font-weight: bold;
-  margin: 0.5rem 0.5rem 0 0;
-  padding: 0.2rem 0.5rem;
+export const ExperienceItemStackIcon = styled(Stack)`
+  margin-right: ${V.Space.xs};
 `

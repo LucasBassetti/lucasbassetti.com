@@ -9,7 +9,8 @@ module.exports = {
     description:
       'Front-end Developer passionate about new technologies. Currently work remotely at YachtLife, the #1 Yacht Brokerage Company.',
     position: 'Front-end Developer',
-    author: `@lucasbassetti`,
+    author: `Lucas Bassetti`,
+    siteUrl: `https://lucasbassetti.com/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -88,7 +89,23 @@ module.exports = {
         ...githubQueryOptions,
       },
     },
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          '@src': 'src',
+          '@components': 'src/components',
+          '@constants': 'src/constants',
+          '@layout': 'src/layout',
+          '@templates': 'src/templates',
+          '@styles': 'src/styles',
+          '@utils': 'src/utils',
+        },
+        extensions: ['js'],
+      },
+    },
     `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-transition-link`,
     `gatsby-plugin-preact`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-typescript`,

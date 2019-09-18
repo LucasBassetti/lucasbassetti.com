@@ -1,17 +1,9 @@
 import { createGlobalStyle } from 'styled-components'
-import media from 'styled-media-query'
+
+import * as V from './variables'
+import * as T from './typography'
 
 const GlobalStyles = createGlobalStyle`
-  @font-face {
-    font-family: 'Lato';
-    src: url('fonts/Lato-Regular.ttf');
-  }
-
-  @font-face {
-    font-family: 'Lato Bold';
-    src: url('fonts/Lato-Bold.ttf');
-  }
-
   /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -29,12 +21,11 @@ const GlobalStyles = createGlobalStyle`
   figure, figcaption, footer, header, hgroup,
   menu, nav, output, ruby, section, summary,
   time, mark, audio, video {
+    border: 0;
+    font: inherit;
+    font-size: 100%;
     margin: 0;
     padding: 0;
-    border: 0;
-    font-size: 16px;
-    line-height: 1;
-    font: inherit;
     vertical-align: baseline;
   }
 
@@ -48,121 +39,114 @@ const GlobalStyles = createGlobalStyle`
     list-style: none;
   }
 
-  blockquote, q {
-    quotes: none;
-  }
-
-  blockquote:before, blockquote:after,
-  q:before, q:after {
-    content: '';
-    content: none;
-  }
-
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
-
   * {
     box-sizing: border-box;
   }
 
-  body {
-    background: var(--background);
-    color: var(--texts);
-    font-family: 'Lato', sans-serif;
+  a {
+    text-decoration: none;
   }
 
-  pre[class*="language-"] {
-    background: #424242;
+  button {
+    background: none;
+    border: 0;
+    padding: 0;
   }
 
   img {
     display: block;
-  	width: 100%;
   	height: auto;
+  	max-width: 100%;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    font-weight: 800;
-    letter-spacing: 0.069rem;
-    line-height: 1.4;
-    margin: 0.625rem 0;
+  svg {
+    fill: currentColor;
   }
 
-  h1 {
-    font-size: 2.8rem;
-
-    ${media.lessThan('large')`
-      font-size: 1.875rem;
-    `}
+  .small,
+  small {
+    font-size: .8rem;
   }
 
-  h2 {
-    font-size: 2.1rem;
-
-    ${media.lessThan('large')`
-      font-size: 1.375rem;
-    `}
+  html {
+    font-size: 16px;
+    -moz-osx-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
   }
 
-  h3 {
-    font-size: 1.6rem;
-  
-    ${media.lessThan('large')`
-      font-size: 1.125rem;
-    `}
+  b, strong {
+    font-weight: 600;
   }
 
-  h4 {
-    font-size: 1.4rem;
+  i, em {
+    font-style: italic;
   }
 
-  h5 {
-    font-size: 1.2rem;
+  input[type="search"] {
+    -webkit-appearance: textfield;
   }
 
-  p, li {
-    font-size: 1.25rem;
-    line-height: 1.6;
-    font-weight: 100;
-    margin: 0.3rem auto;
+  input[type="search"]::-webkit-search-decoration,
+  input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
   }
 
-  a {
-    color: var(--highlight);
-    cursor: pointer;
-    text-decoration: none;
+  *::placeholder {
+    color: var(--secondaryColor);
+  }
 
-    &:hover {
-      color: var(--highlightHover);
-    }
+  *::-webkit-input-placeholder {
+    color: var(--secondaryColor);
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--primaryColor);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 1rem;
+    min-height: calc(100vh);
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    transition: background-color ${V.Transition.default};
+    will-change: background-color;
   }
 
   body.dark {
-    --borders: #424242;
-    --texts: #fff;
-    --highlight: #42a5f5;
-    --highlightHover: #2196f3;
-    --mediumBackground: #313131;
-    --background: #292929;
-    --white: #fff;
-    --black: #222;
+    --bg: ${V.Color.grayDarker};
+    --bgSolid: ${V.Color.blackSolid};
+    --bgSecondary: ${V.Color.grayDark};
+    --borderColor: ${V.Color.grayDark};
+    --highlightColor: ${V.Color.blueLight};
+    --primaryColor: ${V.Color.white};
+    --secondaryColor: ${V.Color.grayLight};
   }
 
   body.light {
-    --borders: #e5e5e5;
-    --texts: #292929;
-    --highlight: #2196f3;
-    --highlightHover: #42a5f5;
-    --mediumBackground: #f9f9f9;
-    --background: #fff;
-    --white: #fff;
-    --black: #222;
+    --bg: ${V.Color.white};
+    --bgSolid: ${V.Color.grayWhite};
+    --bgSecondary: ${V.Color.grayWhite};
+    --borderColor: ${V.Color.grayLighter};
+    --highlightColor: ${V.Color.blue};
+    --primaryColor: ${V.Color.black};
+    --secondaryColor: ${V.Color.gray};
+  }
+
+  p a {
+    ${T.Link}
+  }
+
+  ::selection {
+    background: var(--highlightColor);
+    color: ${V.Color.white};
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none;
+      transition: none;
+    }
   }
 `
 export default GlobalStyles

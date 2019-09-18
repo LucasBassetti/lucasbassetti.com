@@ -5,8 +5,8 @@ backend:
   site_domain: lucasbassetti.com
 
 publish_mode: editorial_workflow
-media_folder: "static/assets/img"
-public_folder: "assets/img"
+media_folder: "static/assets/images/posts"
+public_folder: "assets/images"
 
 collections:
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
@@ -17,17 +17,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
-      - {
-          label: "Date",
-          name: "date",
-          widget: "datetime",
-          format: "YYYY-MM-DD HH:mm:ss",
-        }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss" }
       - { label: "image", name: "thumbnail", widget: "image" }
-      - {
-        label: "Category",
-        name: "category",
-        widget: "select",
-        options: ["CSS", "DEV", "HTML", "JS", "MISC", "SVG", "TS"]
-      }
+      - { label: "Tags", name: "tags", widget: "list", default: [''] }
       - { label: "Body", name: "body", widget: "markdown" }

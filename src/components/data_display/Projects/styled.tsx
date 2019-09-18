@@ -3,17 +3,23 @@ import media from 'styled-media-query'
 import { Heart } from 'styled-icons/boxicons-solid/Heart'
 import { Github } from 'styled-icons/boxicons-logos/Github'
 
+import * as T from '@styles/typography'
+import * as V from '@styles/variables'
+
 export const ProjectsTitle = styled.h1`
+  ${T.Title}
+
   align-items: center;
   display: flex;
   justify-content: center;
-  margin: 2rem 0 1rem;
+  margin: ${V.Space.default} 0 ${V.Space.xs};
 `
 
 export const ProjectsDescription = styled.p`
+  ${T.Subtitle1}
+
+  margin-bottom: ${V.Space.sm};
   text-align: center;
-  margin-bottom: 1rem;
-  font-weight: 100;
 `
 
 export const ProjectsHeartIcon = styled(Heart)`
@@ -26,11 +32,12 @@ export const ProjectsHeartIcon = styled(Heart)`
 `
 
 export const ProjectsGithubLink = styled.a`
+  ${T.Link}
+
   align-items: center;
-  color: var(--texts);
   display: flex;
-  justify-content: space-between;
   font-size: 1rem;
+  justify-content: space-between;
   margin: 2rem auto;
   text-transform: uppercase;
   width: 120px;

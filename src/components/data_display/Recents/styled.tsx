@@ -1,25 +1,24 @@
 import styled from 'styled-components'
-import { Link } from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
+
+import * as T from '@styles/typography'
+import * as V from '@styles/variables'
 
 export const RecentsWrapper = styled.section`
-  padding-top: 3rem;
+  padding-top: ${V.Space.default};
 `
 
 export const RecentsHeader = styled.div`
-  align-items: flex-end;
-  /* border-bottom: 1px solid var(--borders); */
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  padding-bottom: 1rem;
+  padding-bottom: ${V.Space.sm};
 `
 
 export const RecentsTitle = styled.h2`
-  /* font-size: 2rem; */
-  line-height: 1;
-  margin: 0;
-  padding: 0;
+  ${T.Subtitle2}
 `
 
-export const RecentsLink = styled(Link)`
-  font-size: 1.2rem;
+export const RecentsLink = styled(AniLink)`
+  ${T.Link}
 `

@@ -1,18 +1,17 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Headroom from 'headroom.js'
 import Img from 'gatsby-image'
 import { LinkedinSquare as LinkedIn } from 'styled-icons/boxicons-logos/LinkedinSquare'
 import { Instagram } from 'styled-icons/boxicons-logos/Instagram'
 import { Github } from 'styled-icons/boxicons-logos/Github'
+import { getActiveTheme } from '@utils/themes'
+import socialLinks from '@constants/social_links'
+import LogoIcon from '@components/icons/LogoIcon'
 import ThemeSwitch from '../ThemeSwitch'
-import socialLinks from '../../../constants/social_links'
-import LogoIcon from '../../icons/LogoIcon'
 import * as S from './styled'
 
 const Header = () => {
-  const header = useRef<any>()
-
   const { avatarImage } = useStaticQuery(
     graphql`
       query {
@@ -54,9 +53,14 @@ const Header = () => {
   ]
 
   return (
-    <S.HeaderWrapper ref={header}>
+    <S.HeaderWrapper>
       <S.HeaderBlock>
-        <S.HeaderLogo to="/" onMouseOver={() => {}}>
+        <S.HeaderLogo
+          to="/"
+          bg={getActiveTheme()}
+          cover={true}
+          direction="down"
+        >
           <LogoIcon size={20} />
           <S.HeaderProfileWrapper>
             <Img fixed={avatarImage.childImageSharp.fixed} />
@@ -66,7 +70,14 @@ const Header = () => {
       </S.HeaderBlock>
       <S.HeaderBlock>
         {links.map(({ label, url }) => (
-          <S.HeaderLink key={url} to={url} activeClassName="active">
+          <S.HeaderLink
+            key={url}
+            to={url}
+            bg={getActiveTheme()}
+            cover={true}
+            direction="down"
+            activeClassName="active"
+          >
             {label}
           </S.HeaderLink>
         ))}

@@ -8,10 +8,11 @@ const postQuery = `{
         }
         frontmatter {
           title
-          category
+          tags
           date_timestamp: date
           date(locale: "en", formatString: "LL")
           description
+          image
         }
         timeToRead,
         excerpt(pruneLength: 5000)

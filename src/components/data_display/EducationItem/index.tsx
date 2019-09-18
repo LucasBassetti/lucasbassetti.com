@@ -1,4 +1,5 @@
 import React from 'react'
+import BoxHandler from '../BoxHandler'
 import * as S from './styled'
 
 interface IProps {
@@ -23,10 +24,14 @@ const EducationItem = ({
     target="_blank"
     rel="noopener noreferrer"
   >
-    <S.EducationItemUniversity>{university}</S.EducationItemUniversity>
-    <S.EducationItemDegree>{degree}</S.EducationItemDegree>
-    <S.EducationItemCourse>{course}</S.EducationItemCourse>
-    <S.EducationItemDate>{`${startYear} - ${endYear}`}</S.EducationItemDate>
+    <BoxHandler>
+      <S.EducationItemContainer>
+        <S.EducationItemUniversity>{university}</S.EducationItemUniversity>
+        <S.EducationItemDegree>{degree}</S.EducationItemDegree>
+        <S.EducationItemCourse>{course}</S.EducationItemCourse>
+        <S.EducationItemDate>{`${startYear} - ${endYear}`}</S.EducationItemDate>
+      </S.EducationItemContainer>
+    </BoxHandler>
   </S.EducationItemWrapper>
 )
 

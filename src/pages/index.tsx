@@ -18,10 +18,10 @@ const IndexPage = () => {
                 slug
               }
               frontmatter {
+                description
                 date(locale: "en", formatString: "LL")
                 title
-                description
-                category
+                tags
               }
               timeToRead
             }
@@ -56,7 +56,6 @@ const IndexPage = () => {
     .map(({ node }: any) => node)
 
   console.log(posts)
-  console.log(projects)
 
   return (
     <Layout>
@@ -68,7 +67,7 @@ const IndexPage = () => {
         itemsComponent={posts.map(({ node }: any) => (
           <PostItem
             key={node.fields.slug}
-            category={node.frontmatter.category}
+            tags={node.frontmatter.tags}
             date={node.frontmatter.date}
             description={node.frontmatter.description}
             slug={node.fields.slug}

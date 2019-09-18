@@ -8,7 +8,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
-import GlobalStyles from '../../../styles/global'
+import { TransitionPortal } from 'gatsby-plugin-transition-link'
+import GlobalStyles from '@styles/global'
 import Header from '../Header'
 import * as S from './styled'
 
@@ -30,7 +31,9 @@ const Layout = ({ children }: IProps) => {
   return (
     <>
       <GlobalStyles />
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <TransitionPortal level="top">
+        <Header />
+      </TransitionPortal>
       <S.LayoutWrapper>{children}</S.LayoutWrapper>
     </>
   )

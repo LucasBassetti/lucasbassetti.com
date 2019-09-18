@@ -1,6 +1,7 @@
 import React from 'react'
 import { Star } from 'styled-icons/octicons/Star'
 import { RepoForked } from 'styled-icons/octicons/RepoForked'
+import BoxHandler from '../BoxHandler'
 import * as S from './styled'
 
 interface IProps {
@@ -19,20 +20,22 @@ const ProjectItem = ({
   url,
 }: IProps) => (
   <S.ProjectItemWrapper href={url} target="_blank" rel="noopener noreferrer">
-    <S.ProjectItemName>{name}</S.ProjectItemName>
-    <S.ProjectItemStatsWrapper>
-      <S.ProjectItemStatsItem>
-        <Star size={16} />
-        <S.ProjectItemStatsValue>{starsCount}</S.ProjectItemStatsValue>
-      </S.ProjectItemStatsItem>
-      <S.ProjectItemStatsItem>
-        <RepoForked size={16} />
-        <S.ProjectItemStatsValue>{forkCount}</S.ProjectItemStatsValue>
-      </S.ProjectItemStatsItem>
-    </S.ProjectItemStatsWrapper>
-    <S.ProjectItemDescription>
-      {description.replace(/:.*:/, '')}
-    </S.ProjectItemDescription>
+    <BoxHandler>
+      <S.ProjectItemName>{name}</S.ProjectItemName>
+      <S.ProjectItemStatsWrapper>
+        <S.ProjectItemStatsItem>
+          <Star size={16} />
+          <S.ProjectItemStatsValue>{starsCount}</S.ProjectItemStatsValue>
+        </S.ProjectItemStatsItem>
+        <S.ProjectItemStatsItem>
+          <RepoForked size={16} />
+          <S.ProjectItemStatsValue>{forkCount}</S.ProjectItemStatsValue>
+        </S.ProjectItemStatsItem>
+      </S.ProjectItemStatsWrapper>
+      <S.ProjectItemDescription>
+        {description.replace(/:.*:/, '')}
+      </S.ProjectItemDescription>
+    </BoxHandler>
   </S.ProjectItemWrapper>
 )
 
