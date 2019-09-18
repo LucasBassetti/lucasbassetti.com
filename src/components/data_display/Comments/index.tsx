@@ -4,7 +4,7 @@ import ReactDisqusComments from 'react-disqus-comments'
 import * as S from './styled'
 
 interface IProps {
-  url: string
+  slug: string
   title: string
 }
 

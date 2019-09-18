@@ -33,48 +33,58 @@ const About = () => {
         }
       }
       query {
-        a4pmImage: file(relativePath: { eq: "experience/a4pm.jpg" }) {
+        a4pmImage: file(relativePath: { eq: "images/experience/a4pm.jpg" }) {
           ...squareImage
         }
-        anttImage: file(relativePath: { eq: "experience/antt.jpg" }) {
+        anttImage: file(relativePath: { eq: "images/experience/antt.jpg" }) {
           ...squareImage
         }
-        cativaImage: file(relativePath: { eq: "experience/cativa.jpg" }) {
+        cativaImage: file(
+          relativePath: { eq: "images/experience/cativa.jpg" }
+        ) {
           ...squareImage
         }
-        dinelyImage: file(relativePath: { eq: "experience/dinely.jpg" }) {
+        dinelyImage: file(
+          relativePath: { eq: "images/experience/dinely.jpg" }
+        ) {
           ...squareImage
         }
         institutoElevarImage: file(
-          relativePath: { eq: "experience/instituto_elevar.jpg" }
+          relativePath: { eq: "images/experience/instituto_elevar.jpg" }
         ) {
           ...squareImage
         }
         integrationAlphaImage: file(
-          relativePath: { eq: "experience/integration_alpha.jpg" }
+          relativePath: { eq: "images/experience/integration_alpha.jpg" }
         ) {
           ...squareImage
         }
-        padtecImage: file(relativePath: { eq: "experience/padtec.jpg" }) {
+        padtecImage: file(
+          relativePath: { eq: "images/experience/padtec.jpg" }
+        ) {
           ...squareImage
         }
-        partioImage: file(relativePath: { eq: "experience/partio.jpg" }) {
+        partioImage: file(
+          relativePath: { eq: "images/experience/partio.jpg" }
+        ) {
           ...squareImage
         }
-        prppgImage: file(relativePath: { eq: "experience/prppg.jpg" }) {
+        prppgImage: file(relativePath: { eq: "images/experience/prppg.jpg" }) {
           ...squareImage
         }
         sharetempusImage: file(
-          relativePath: { eq: "experience/sharetempus.jpg" }
+          relativePath: { eq: "images/experience/sharetempus.jpg" }
         ) {
           ...squareImage
         }
         trainEffectiveImage: file(
-          relativePath: { eq: "experience/train_effective.jpg" }
+          relativePath: { eq: "images/experience/train_effective.jpg" }
         ) {
           ...squareImage
         }
-        yachtlifeImage: file(relativePath: { eq: "experience/yachtlife.jpg" }) {
+        yachtlifeImage: file(
+          relativePath: { eq: "images/experience/yachtlife.jpg" }
+        ) {
           ...squareImage
         }
       }

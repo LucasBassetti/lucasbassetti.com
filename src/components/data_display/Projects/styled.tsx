@@ -12,13 +12,13 @@ export const ProjectsTitle = styled.h1`
   align-items: center;
   display: flex;
   justify-content: center;
-  margin: ${V.Space.default} 0 ${V.Space.xs};
+  margin: ${V.Space.default} 0 ${V.Space.sm};
 `
 
 export const ProjectsDescription = styled.p`
   ${T.Subtitle1}
 
-  margin-bottom: ${V.Space.sm};
+  margin-bottom: ${V.Space.default};
   text-align: center;
 `
 

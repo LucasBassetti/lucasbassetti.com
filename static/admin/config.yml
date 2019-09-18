@@ -4,14 +4,15 @@ backend:
   branch: master
   site_domain: lucasbassetti.com
 
+media_folder: static/assets/posts
+public_folder: assets
+media_folder_relative: true
 publish_mode: editorial_workflow
-media_folder: "static/assets/images/posts"
-public_folder: "assets/images"
 
 collections:
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
     label: "Posts" # Used in the UI
-    folder: "posts" # The path to the folder where the documents are stored
+    folder: "content/posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter

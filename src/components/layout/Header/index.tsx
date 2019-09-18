@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef, RefObject } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Headroom from 'headroom.js'
 import Img from 'gatsby-image'
@@ -12,10 +12,11 @@ import ThemeSwitch from '../ThemeSwitch'
 import * as S from './styled'
 
 const Header = () => {
+  const header = useRef<HTMLElement>(null)
   const { avatarImage } = useStaticQuery(
     graphql`
       query {
-        avatarImage: file(relativePath: { eq: "general/profile.jpeg" }) {
+        avatarImage: file(relativePath: { eq: "images/general/profile.jpeg" }) {
           childImageSharp {
             fixed(width: 36, height: 36) {
               ...GatsbyImageSharpFixed
@@ -27,17 +28,18 @@ const Header = () => {
   )
 
   useEffect(() => {
-    const header = document.querySelector('header')
-    const headroom = new Headroom(header, {
-      offset: 100,
-      tolerance: {
-        up: 20,
-        down: 10,
-      },
-    })
+    if (header.current) {
+      const headroom = new Headroom(header.current, {
+        offset: 100,
+        tolerance: {
+          up: 20,
+          down: 10,
+        },
+      })
 
-    headroom.init()
-  }, [])
+      headroom.init()
+    }
+  }, [header.current])
 
   const Icons = {
     Github,
@@ -53,7 +55,7 @@ const Header = () => {
   ]
 
   return (
-    <S.HeaderWrapper>
+    <S.HeaderWrapper ref={header}>
       <S.HeaderBlock>
         <S.HeaderLogo
           to="/"
@@ -68,7 +70,7 @@ const Header = () => {
         </S.HeaderLogo>
         <ThemeSwitch />
       </S.HeaderBlock>
-      <S.HeaderBlock>
+      <S.HeaderNavBlock>
         {links.map(({ label, url }) => (
           <S.HeaderLink
             key={url}
@@ -81,7 +83,7 @@ const Header = () => {
             {label}
           </S.HeaderLink>
         ))}
-      </S.HeaderBlock>
+      </S.HeaderNavBlock>
       <S.HeaderBlock>
         {socialLinks.map(({ label, url }) => {
           const Icon = Icons[label]

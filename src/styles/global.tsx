@@ -124,7 +124,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body.light {
-    --bg: ${V.Color.white};
+    --bg: ${V.Color.whiteSolid};
     --bgSolid: ${V.Color.grayWhite};
     --bgSecondary: ${V.Color.grayWhite};
     --borderColor: ${V.Color.grayLighter};

@@ -1,8 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout/Layout'
-import SEO from '../components/layout/SEO'
-import Post from '../components/data_display/Post'
+import { FluidObject } from 'gatsby-image'
+import Layout from '@components/layout/Layout'
+import SEO from '@components/layout/SEO'
+import Post from '@components/data_display/Post'
 
 interface IProps {
   data: {
@@ -13,7 +14,7 @@ interface IProps {
       frontmatter: {
         date: string
         description: string
-        image: any
+        image: FluidObject
         title: string
         timeToRead: number
       }
@@ -24,8 +25,6 @@ interface IProps {
 
 const BlogPost = ({ data }: IProps) => {
   const post = data.markdownRemark
-
-  console.log(post)
 
   return (
     <Layout>
@@ -47,8 +46,16 @@ export const query = graphql`
       frontmatter {
         date(locale: "en", formatString: "LL")
         description
-        image
         title
+        image {
+          id
+          publicURL
+          childImageSharp {
+            fluid(maxWidth: 1280, quality: 60) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
       timeToRead
       html

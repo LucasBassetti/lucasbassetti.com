@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
+import * as T from '@styles/typography'
+import * as V from '@styles/variables'
+
 export const PostHeader = styled.header`
   color: var(--primaryColor);
   margin: auto;
@@ -12,30 +15,34 @@ export const PostHeader = styled.header`
 `
 
 export const PostTitle = styled.h1`
-  font-size: 4rem;
-  font-weight: 700;
-  line-height: 1.2;
-  margin: 1rem auto;
+  ${T.Title}
 
-  ${media.lessThan('large')`
-    font-size: 2.6rem;
-    line-height: 1.1;
-  `}
+  margin: 1rem auto;
 `
 
 export const PostDescription = styled.h2`
-  font-size: 2rem;
-  font-weight: 200;
-
-  ${media.lessThan('large')`
-    font-size: 1.6rem;
-    line-height: 1.3;
-  `}
+  ${T.Subtitle2}
 `
 
 export const PostDate = styled.p`
-  font-size: 1.1rem;
-  font-weight: 100;
+  color: var(--secondaryColor);
+  display: block;
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+
+  &:not(:last-child) {
+    margin-bottom: ${V.Space.xxs};
+  }
+`
+
+export const PostPullRequestWrapper = styled.div`
+  border-top: 1px solid var(--borderColor);
+`
+
+export const PostPullRequestTitle = styled.h2`
+  ${T.Heading2}
+
+  border-bottom: 1px solid var(--borderColor);
 `
 
 export const MainContent = styled.section`
@@ -59,8 +66,8 @@ export const MainContent = styled.section`
     color: var(--primaryColor);
     font-size: 1.25rem;
     font-weight: 300;
-    line-height: 1.7;
     letter-spacing: 0.069rem;
+    line-height: 1.7;
 
     ${media.lessThan('large')`
       word-break: break-word;
@@ -69,14 +76,6 @@ export const MainContent = styled.section`
 
   p {
     margin: 0 auto 1.6rem;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    margin: 2.4rem auto 1rem;
   }
 
   ul,
@@ -141,6 +140,7 @@ export const MainContent = styled.section`
     font-weight: 800;
     letter-spacing: 0.069rem;
     line-height: 1.4;
+    margin: 2.4rem auto 1rem;
   }
 
   h1 {

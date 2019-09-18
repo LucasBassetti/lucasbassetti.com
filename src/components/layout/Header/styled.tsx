@@ -39,14 +39,19 @@ export const HeaderBlock = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 1rem;
+`
+
+export const HeaderNavBlock = styled.nav`
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
 
   ${media.lessThan('medium')`
-    &:nth-child(2) {
-      border-top: 1px solid var(--borderColor);
-      background: var(--bgSolid);
-      order: 2
-      width: 100%;
-    }
+    border-top: 1px solid var(--borderColor);
+    background: var(--bgSolid);
+    order: 2
+    width: 100%;
   `}
 `
 
