@@ -14,7 +14,10 @@ interface IProps {
       frontmatter: {
         date: string
         description: string
-        image: FluidObject
+        image: {
+          publicURL: string
+          childImageSharp: FluidObject
+        }
         title: string
         timeToRead: number
       }
@@ -31,6 +34,7 @@ const BlogPost = ({ data }: IProps) => {
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description}
+        image={post.frontmatter.image.publicURL}
       />
       <Post post={post} />
     </Layout>
@@ -48,7 +52,6 @@ export const query = graphql`
         description
         title
         image {
-          id
           publicURL
           childImageSharp {
             fluid(maxWidth: 1280, quality: 60) {

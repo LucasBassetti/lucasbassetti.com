@@ -21,8 +21,6 @@ const ExperienceItem = ({
   companyImage,
   companyUrl,
 }: IProps) => {
-  console.log(companyImage)
-
   return (
     <S.ExperienceItem
       href={companyUrl}

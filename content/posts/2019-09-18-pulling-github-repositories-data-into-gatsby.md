@@ -10,6 +10,7 @@ tags:
   - github
   - javascript
 ---
+
 ## Introduction
 
 In this post we will learn how to pull Github repositories into Gatsby-based website using the [gatsby-source-github-api](https://www.gatsbyjs.org/packages/gatsby-source-github-api/).
@@ -53,15 +54,15 @@ Personal access tokens function like ordinary OAuth access tokens. They can be u
 
 1. Select your profile in the Github header and pick the \`Settings\` option.
 
-![Github profile settings](/assets/pulling-github-repositories-data-into-gatsby-1.jpg "Github profile settings")
+![Github profile settings](/assets/pulling-github-repositories-data-into-gatsby-1.jpg 'Github profile settings')
 
 2. Go to \`Developer settings\` and \`Personal access token\`. When you there click in \`Generate new token\` button.
 
-![Github developer settings](/assets/pulling-github-repositories-data-into-gatsby-2.jpg "Github developer settings")
+![Github developer settings](/assets/pulling-github-repositories-data-into-gatsby-2.jpg 'Github developer settings')
 
 3. Lastly, you should fill the fields \`Note\` and \`Select scopes\` based in your needs. Then, click in the button \`Generate Token\`.
 
-![Github personal access token](/assets/pulling-github-repositories-data-into-gatsby-3.jpg "Github personal access token")
+![Github personal access token](/assets/pulling-github-repositories-data-into-gatsby-3.jpg 'Github personal access token')
 
 Copy your generated token and add it in your plugin configuration:
 

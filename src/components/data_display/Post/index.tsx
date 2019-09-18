@@ -15,7 +15,7 @@ const Post = ({ post }: any) => {
   )}`
 
   return (
-    <>
+    <article>
       <S.PostCoverImage fluid={post.frontmatter.image.childImageSharp.fluid} />
       <S.PostHeader>
         <S.PostDate>
@@ -41,7 +41,7 @@ const Post = ({ post }: any) => {
         </S.PostPullRequestWrapper>
       </S.MainContent>
       <Comments slug={post.fields.slug} title={post.frontmatter.title} />
-    </>
+    </article>
   )
 }
 

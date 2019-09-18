@@ -58,8 +58,6 @@ const IndexPage = () => {
     .slice(0, 4)
     .map(({ node }: any) => node)
 
-  console.log(posts)
-
   return (
     <Layout>
       <SEO title="Home" />
