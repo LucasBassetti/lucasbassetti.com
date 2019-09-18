@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "lucasbassetti.com",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Front-end Developer passionate about new technologies. Currently work remotely at YachtLife, the #1 Yacht Brokerage Company.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Lucas Bassetti <lucasbr.dafonseca@gmail.com>",
   "scripts": {
     "analyze": "source-map-explorer 'public/**/*.js'",
     "build": "gatsby build",
@@ -12,6 +12,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
+    "lint:ts": "tslint './src/**/*.tsx'",
     "lint:css": "stylelint './src/**/*.tsx'",
     "lint:css:fix": "stylelint './src/**/*.tsx' --fix"
   },
@@ -27,6 +28,7 @@
     "gatsby-image": "^2.2.17",
     "gatsby-plugin-algolia-search": "^0.5.4",
     "gatsby-plugin-alias-imports": "^1.0.5",
+    "gatsby-plugin-feed": "^2.3.12",
     "gatsby-plugin-manifest": "^2.2.6",
     "gatsby-plugin-netlify-cms": "^4.1.16",
     "gatsby-plugin-offline": "^2.2.7",

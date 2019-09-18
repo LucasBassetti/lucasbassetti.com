@@ -2,6 +2,7 @@ require('dotenv').config({ path: '.env' })
 
 const queries = require('./src/utils/algolia_queries')
 const githubQueryOptions = require('./src/utils/github_query_options')
+const feeds = require('./src/utils/feeds')
 
 module.exports = {
   siteMetadata: {
@@ -77,6 +78,24 @@ module.exports = {
       options: {
         token: process.env.GITHUB_ACCESS_TOKEN,
         ...githubQueryOptions,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds,
       },
     },
     {
