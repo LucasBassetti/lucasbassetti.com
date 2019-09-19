@@ -14,7 +14,7 @@ const postQuery = `{
           description
         }
         timeToRead,
-        excerpt(pruneLength: 5000, format: Mdx)
+        excerpt(pruneLength: 5000)
       }
     }
   }

@@ -24,7 +24,7 @@ const feeds = [
                 description
                 date
               }
-              excerpt(pruneLength: 500, format: Mdx)
+              excerpt(pruneLength: 500)
             }
           }
         }
