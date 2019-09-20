@@ -50,7 +50,7 @@ const Header = () => {
   const links = [
     { label: 'Articles', url: '/blog/' },
     { label: 'Projects', url: '/projects/' },
-    { label: 'Porfolio', url: '/porfolio/' },
+    { label: 'Portfolio', url: '/portfolio/' },
     { label: 'About', url: '/about/' },
   ]
 

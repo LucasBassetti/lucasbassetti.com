@@ -46,20 +46,21 @@ const ProfileIntro = ({ full = false }: IProps) => {
               that loves open source and discovering new technologies.
             </p>
             <p>
-              I received my Computer Science degree in 2014 and my Master degree
-              in 2017 from the Federal University of Espírito Santo (Vitória,
-              Brazil). My graduation Final Project and Master thesis contributed
-              to improve the quality of public data from Brazilian government
-              using semantic interoperability and semantic web techniques. The
-              first one was finalist of a Final Project Award in Bachelor’s
-              Degree of Information Technology Area realized by SINDINFO.
+              I received my Computer Science Bachelor's degree in 2014 and my
+              Master's degree in 2017 from the Federal University of Espírito
+              Santo (Vitória, Brazil). My graduation Final Project and Master
+              thesis contributed to improve the quality of public data from
+              Brazilian government using semantic interoperability and semantic
+              web techniques. The first one was finalist of a Final Project
+              Award in Bachelor’s Degree of Information Technology Area realized
+              by SINDINFO.
             </p>
             <p>
               Since I started working remotely I passed through companies from
               US, Brazil, Switzerland and London and worked with different
-              technologies such React, React Native, Redux, TypeScript, Node JS,
-              Firebase, MeteorJS, MongoDB and MySQL. Currently I'm Front-end
-              Developer at YachtLife, the #1 Yacht Brokerage Company.
+              technologies such React, React Native, Redux, TypeScript, Gatsby,
+              NodeJS, Firebase, MeteorJS, MongoDB and MySQL. Currently I'm
+              Front-end Developer at YachtLife, the #1 Yacht Brokerage Company.
             </p>
             <p>
               In 2016, I started contributing to open source projects. My main
