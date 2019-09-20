@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
+import * as T from '@styles/typography'
 import * as V from '@styles/variables'
 
 export const EducationItemWrapper = styled.a`
@@ -45,20 +46,22 @@ export const EducationItemContainer = styled.div`
 `
 
 export const EducationItemUniversity = styled.h3`
-  font-size: 1rem;
+  ${T.Subtitle4}
   font-weight: 400;
   margin: 0;
+  text-align: center;
 `
 
 export const EducationItemCourse = styled.h3`
-  font-size: 1.2rem;
+  ${T.Subtitle3}
   font-weight: 100;
   margin: 0;
 `
 
 export const EducationItemDegree = styled.h2`
-  font-size: 2rem;
+  ${T.Heading1}
   margin: 1rem 0 0;
+  text-align: center;
 `
 
 export const EducationItemDate = styled.time`

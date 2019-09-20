@@ -25,4 +25,9 @@ export const PublicationItemText = styled.p`
   strong {
     color: var(--primaryColor);
   }
+
+  ${media.lessThan('medium')`
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+  `}
 `

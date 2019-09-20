@@ -46,16 +46,31 @@ export const ExperienceItemContentHeader = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
+
+  ${media.lessThan('medium')`
+    align-items: flex-start;
+    flex-direction: column;
+  `}
 `
 
 export const ExperienceItemPosition = styled.h2`
   ${T.Heading2}
+
+  ${media.lessThan('medium')`
+    order: 2
+  `}
 `
 
 export const ExperienceItemDate = styled.time`
   color: var(--secondaryColor);
   font-size: 1rem;
   font-weight: 100;
+
+  ${media.lessThan('medium')`
+    font-size: 0.8rem;
+    margin-bottom: ${V.Space.xs}
+    order: 1
+  `}
 `
 
 export const ExperienceCompany = styled.span`
@@ -73,7 +88,7 @@ export const ExperienceItemTech = styled.p`
 
   ${media.lessThan('medium')`
     margin-top: ${V.Space.sm};
-  `};
+  `}
 `
 
 export const ExperienceItemStackIcon = styled(Stack)`
