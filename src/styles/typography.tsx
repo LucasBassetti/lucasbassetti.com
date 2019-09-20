@@ -20,7 +20,7 @@ export const Subtitle1 = `
   color: var(--secondaryColor);
   font-size: 1.5rem;
   letter-spacing: -0.45px;
-  line-height: 1.5rem;
+  line-height: 2rem;
 
   @media (max-width: 768px) {
     font-size: 1.4rem;

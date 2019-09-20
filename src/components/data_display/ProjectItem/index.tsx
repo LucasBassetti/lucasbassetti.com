@@ -20,7 +20,7 @@ const ProjectItem = ({
   starsCount,
   url,
 }: IProps) => {
-  const tracProjectItemClick = () => {
+  const trackProjectItemClick = () => {
     trackEvent({
       category: 'Project',
       action: 'click',
@@ -30,7 +30,7 @@ const ProjectItem = ({
 
   return (
     <S.ProjectItemWrapper
-      onClick={tracProjectItemClick}
+      onClick={trackProjectItemClick}
       href={url}
       target="_blank"
       rel="noopener noreferrer"

@@ -5,9 +5,11 @@ import {
   experienceList,
   volunteerExperienceList,
 } from '@constants/experience_list'
+import { publicationList } from '@constants/publications_list'
 import ProfileIntro from '../ProfileIntro'
 import EducationItem from '../EducationItem'
 import ExperienceItem from '../ExperienceItem'
+import PublicationItem from '../PublicationItem'
 import * as S from './styled'
 
 const About = () => {
@@ -149,6 +151,18 @@ const About = () => {
             company={experienceItem.company}
             companyImage={images[experienceItem.companyImageKey]}
             companyUrl={experienceItem.companyUrl}
+          />
+        ))}
+      </div>
+      <S.AboutTitle>Publications</S.AboutTitle>
+      <div>
+        {publicationList.map(publication => (
+          <PublicationItem
+            key={publication.title}
+            authors={publication.authors}
+            conference={publication.conference}
+            title={publication.title}
+            url={publication.url}
           />
         ))}
       </div>

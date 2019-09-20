@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 import Img from 'gatsby-image'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import { ArrowBack } from 'styled-icons/boxicons-regular/ArrowBack'
 
 import * as T from '@styles/typography'
 import * as V from '@styles/variables'
@@ -33,7 +35,20 @@ export const PostCoverImage = styled(Img).attrs({
   }
 `
 
-export const PostHeader = styled.header`
+export const PostBack = styled(AniLink)`
+  ${T.Link}
+
+  align-items: center;
+  display: inline-flex;
+  letter-spacing: 0.05rem;
+  margin-bottom: ${V.Space.sm};
+`
+
+export const PostArrowBackIcon = styled(ArrowBack)`
+  margin-right: ${V.Space.xxs};
+`
+
+export const PostHeader = styled.div`
   color: var(--primaryColor);
   margin: auto;
   padding: 1rem 0 0;

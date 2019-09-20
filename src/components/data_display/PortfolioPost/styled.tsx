@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 import Img from 'gatsby-image'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import { ArrowBack } from 'styled-icons/boxicons-regular/ArrowBack'
 
 import * as T from '@styles/typography'
 import * as V from '@styles/variables'
@@ -41,6 +43,19 @@ export const PortfolioPostHeader = styled.div`
   ${media.lessThan('large')`
     padding: 3rem 0 0;
   `}
+`
+
+export const PortfolioPostBack = styled(AniLink)`
+  ${T.Link}
+
+  align-items: center;
+  display: inline-flex;
+  letter-spacing: 0.05rem;
+  margin-bottom: ${V.Space.sm};
+`
+
+export const PortfolioPostArrowBackIcon = styled(ArrowBack)`
+  margin-right: ${V.Space.xxs};
 `
 
 export const PortfolioPostTitle = styled.h1`

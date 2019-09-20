@@ -1,6 +1,7 @@
 import React from 'react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { trackEvent } from '@utils/analytics'
+import { getActiveTheme } from '@utils/themes'
 import Comments from '../Comments'
 import * as S from './styled'
 
@@ -27,6 +28,14 @@ const Post = ({ post }: any) => {
     <article>
       <S.PostCoverImage fluid={post.frontmatter.image.childImageSharp.fluid} />
       <S.PostHeader>
+        <S.PostBack
+          to="/blog/"
+          bg={getActiveTheme()}
+          cover={true}
+          direction="down"
+        >
+          <S.PostArrowBackIcon size={12} /> Back to list
+        </S.PostBack>
         <S.PostDate>
           {post.frontmatter.date} • {post.timeToRead} min to read
         </S.PostDate>
