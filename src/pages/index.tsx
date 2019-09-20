@@ -15,7 +15,7 @@ const IndexPage = () => {
         blogPosts: allMdx(
           filter: { fields: { type: { eq: "blog" } } }
           sort: { fields: frontmatter___date, order: DESC }
-          limit: 3
+          limit: 2
         ) {
           edges {
             node {
@@ -35,7 +35,7 @@ const IndexPage = () => {
         portfolioPosts: allMdx(
           filter: { fields: { type: { eq: "portfolio" } } }
           sort: { fields: frontmatter___date, order: DESC }
-          limit: 3
+          limit: 2
         ) {
           edges {
             node {

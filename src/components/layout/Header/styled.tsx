@@ -18,7 +18,7 @@ export const HeaderWrapper = styled.header`
   transform: translateY(0);
   transition: transform 0.3s ease;
   width: 100%;
-  z-index: 999;
+  z-index: ${V.ZIndex.header};
 
   &.headroom {
     transition: transform 0.2s linear;

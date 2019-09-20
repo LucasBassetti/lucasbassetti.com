@@ -33,7 +33,7 @@ export const PortfolioPostCoverImage = styled(Img).attrs({
   }
 `
 
-export const PortfolioPostHeader = styled.header`
+export const PortfolioPostHeader = styled.div`
   color: var(--primaryColor);
   margin: auto;
   padding: 1rem 0 0;

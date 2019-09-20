@@ -1684,13 +1684,6 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-images@^0.5.1":
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/@types/react-images/-/react-images-0.5.1.tgz#e00ccce7221a03ed7b43072cefdc0e5a66fc5a08"
-  integrity sha512-n2guyR+kblfNEAr1TA3GnrpEdt0/2dHxMOFaFcCgI62NRQaQClaNdgidsim3JRVWLlUiWilDjzZnJUSR0kMncQ==
-  dependencies:
-    "@types/react" "*"
-
 "@types/react-instantsearch-core@*":
   version "5.2.9"
   resolved "https://registry.yarnpkg.com/@types/react-instantsearch-core/-/react-instantsearch-core-5.2.9.tgz#c8050dedefcb86ff01a0ff584c1801f5b165fe4a"
@@ -12719,6 +12712,14 @@ react-hot-loader@^4.8.0:
     shallowequal "^1.1.0"
     source-map "^0.7.3"
 
+react-image-lightbox@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/react-image-lightbox/-/react-image-lightbox-5.1.0.tgz#b47b904b027c918acdd9efa94dc0a0ddd8125c86"
+  integrity sha512-R46QvffoDBscLQgTl4s3kFxVbnP7a+nIh7AXJNS0EXVeDaa6zKDKtIT+jFeEvs+F9oUHtZfenG1NHhTkO4hEOA==
+  dependencies:
+    prop-types "^15.6.2"
+    react-modal "^3.6.1"
+
 react-images@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/react-images/-/react-images-1.0.0.tgz#9dcca9e91137c9ad175ba832a965ca1141e6aea8"
@@ -12789,7 +12790,7 @@ react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
-react-modal@^3.8.1:
+react-modal@^3.6.1, react-modal@^3.8.1:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-3.10.1.tgz#ba37927871830c798f51404aa6bc71ff7a5e4c16"
   integrity sha512-2DKIfdOc8+WY+SYJ/xf/WBwOYMmNAYAyGkYlc4e1TCs9rk1xY4QBz04hB3UHGcrLChh7ce77rHAe6VPNmuLYsQ==

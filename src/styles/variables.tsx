@@ -67,6 +67,7 @@ export const ZIndex = {
   default: `1`,
   footer: `5`,
   header: `5`,
+  lightbox: '6',
 }
 
 // --------------------------------------------------
