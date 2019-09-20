@@ -30,6 +30,8 @@ interface IProps {
 const BlogPost = ({ data }: IProps) => {
   const post = data.mdx
 
+  console.log(post)
+
   return (
     <Layout>
       <SEO

@@ -71,11 +71,11 @@ export const MainContent = styled.section`
     padding: 2rem 0;
   `}
 
-  p,
-  h1,
-  h2,
-  h3,
-  h4,
+  p:not([class]),
+  h1:not([class]),
+  h2:not([class]),
+  h3:not([class]),
+  h4:not([class]),
   ul,
   ol,
   .tags,
@@ -92,7 +92,7 @@ export const MainContent = styled.section`
     `}
   }
 
-  p {
+  p:not([class]) {
     margin: 0 auto 1.6rem;
   }
 
@@ -111,8 +111,8 @@ export const MainContent = styled.section`
     }
   }
 
-  p,
-  li {
+  li,
+  p:not([class]) {
     code {
       word-wrap: break-word;
     }
@@ -154,18 +154,18 @@ export const MainContent = styled.section`
     margin: 20px auto !important;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
+  h1:not([class]),
+  h2:not([class]),
+  h3:not([class]),
+  h4:not([class]),
+  h5:not([class]) {
     font-weight: 800;
     letter-spacing: 0.069rem;
     line-height: 1.4;
     margin: 2.4rem auto 1rem;
   }
 
-  h1 {
+  h1:not([class]) {
     font-size: 2.8rem;
 
     ${media.lessThan('large')`
@@ -173,7 +173,7 @@ export const MainContent = styled.section`
     `}
   }
 
-  h2 {
+  h2:not([class]) {
     font-size: 2.1rem;
 
     ${media.lessThan('large')`
@@ -181,7 +181,7 @@ export const MainContent = styled.section`
     `}
   }
 
-  h3 {
+  h3:not([class]) {
     font-size: 1.6rem;
 
     ${media.lessThan('large')`
@@ -189,11 +189,11 @@ export const MainContent = styled.section`
     `}
   }
 
-  h4 {
+  h4:not([class]) {
     font-size: 1.4rem;
   }
 
-  h5 {
+  h5:not([class]) {
     font-size: 1.2rem;
   }
 
