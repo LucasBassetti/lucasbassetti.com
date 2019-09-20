@@ -1,6 +1,6 @@
 import React from 'react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-
+import { trackEvent } from '@utils/analytics'
 import Comments from '../Comments'
 import * as S from './styled'
 
@@ -14,6 +14,14 @@ const Post = ({ post }: any) => {
     '/',
     '.md'
   )}`
+
+  const trackGithubPRClick = () => {
+    trackEvent({
+      category: 'Github PR',
+      action: 'click',
+      label: `Github PR - ${post.frontmatter.title}`,
+    })
+  }
 
   return (
     <article>
@@ -33,7 +41,12 @@ const Post = ({ post }: any) => {
           <p>
             This project is open-source, so if something is missing or if you
             found some part confusing, please submit a pull-request in the{' '}
-            <a href={postGithubUrl} target="_blank" rel="noopener noreferrer">
+            <a
+              onClick={trackGithubPRClick}
+              href={postGithubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Github
             </a>{' '}
             repository for this post with your suggestions for improvement. It

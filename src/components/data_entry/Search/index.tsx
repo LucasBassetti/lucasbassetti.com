@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import algoliasearch from 'algoliasearch/lite'
 import { InstantSearch, SearchBox, Stats, Hits } from 'react-instantsearch-dom'
+import { trackEvent } from '@utils/analytics'
 import Hit from './Hit'
 import * as S from './styled'
 
@@ -8,6 +9,11 @@ interface IAlgolia {
   appId: string
   searchOnlyApiKey: string
   indexName: string
+}
+
+interface ISearch {
+  query: string
+  page: number
 }
 
 const algolia: IAlgolia = {
@@ -18,14 +24,36 @@ const algolia: IAlgolia = {
 
 const searchClient = algoliasearch(algolia.appId, algolia.searchOnlyApiKey)
 
-const Search = () => (
-  <S.SearchWrapper>
-    <InstantSearch searchClient={searchClient} indexName={algolia.indexName}>
-      <SearchBox />
-      <Stats />
-      <Hits hitComponent={Hit} />
-    </InstantSearch>
-  </S.SearchWrapper>
-)
+const Search = () => {
+  const [searchState, setSearchState] = useState<ISearch>({
+    query: '',
+    page: 1,
+  })
+
+  const onSearchStateChange = (updatedSearchState: ISearch) => {
+    setSearchState(updatedSearchState)
+
+    trackEvent({
+      category: 'Search',
+      action: 'search',
+      label: `Search - ${updatedSearchState.query}`,
+    })
+  }
+
+  return (
+    <S.SearchWrapper>
+      <InstantSearch
+        searchClient={searchClient}
+        indexName={algolia.indexName}
+        searchState={searchState}
+        onSearchStateChange={onSearchStateChange}
+      >
+        <SearchBox />
+        <Stats />
+        <Hits hitComponent={Hit} />
+      </InstantSearch>
+    </S.SearchWrapper>
+  )
+}
 
 export default Search

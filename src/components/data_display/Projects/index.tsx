@@ -1,5 +1,6 @@
 import React from 'react'
 import { Github } from 'styled-icons/boxicons-logos/Github'
+
 import ProjectItem from '../ProjectItem'
 import * as S from './styled'
 

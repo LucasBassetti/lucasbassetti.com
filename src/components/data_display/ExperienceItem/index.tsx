@@ -1,6 +1,7 @@
 import React from 'react'
 import { FixedObject } from 'gatsby-image'
 import { Tech } from '@constants/experience_list'
+import { trackEvent } from '@utils/analytics'
 import BoxHandler from '../BoxHandler'
 import * as S from './styled'
 
@@ -21,8 +22,17 @@ const ExperienceItem = ({
   companyImage,
   companyUrl,
 }: IProps) => {
+  const trackExperienceItemClick = () => {
+    trackEvent({
+      category: 'Experience',
+      action: 'click',
+      label: `Experience - ${company}`,
+    })
+  }
+
   return (
     <S.ExperienceItem
+      onClick={trackExperienceItemClick}
       href={companyUrl}
       target="_blank"
       rel="noopener noreferrer"

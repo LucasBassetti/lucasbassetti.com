@@ -1,10 +1,11 @@
-import React, { useEffect, useRef, RefObject } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Headroom from 'headroom.js'
 import Img from 'gatsby-image'
 import { LinkedinSquare as LinkedIn } from 'styled-icons/boxicons-logos/LinkedinSquare'
 import { Instagram } from 'styled-icons/boxicons-logos/Instagram'
 import { Github } from 'styled-icons/boxicons-logos/Github'
+import { trackEvent } from '@utils/analytics'
 import { getActiveTheme } from '@utils/themes'
 import socialLinks from '@constants/social_links'
 import LogoIcon from '@components/icons/LogoIcon'
@@ -40,6 +41,14 @@ const Header = () => {
       headroom.init()
     }
   }, [header.current])
+
+  const trackMenuItemClick = (label: string) => {
+    trackEvent({
+      category: 'Menu',
+      action: 'click',
+      label: `Menu - ${label}`,
+    })
+  }
 
   const Icons = {
     Github,
@@ -77,6 +86,7 @@ const Header = () => {
             to={url}
             bg={getActiveTheme()}
             cover={true}
+            onClick={() => trackMenuItemClick(label)}
             direction="down"
             activeClassName="active"
           >

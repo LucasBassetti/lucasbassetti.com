@@ -1,5 +1,6 @@
 declare global {
   interface Window {
+    DISQUS: any
     __theme: string
     __onThemeChange: () => void
     __setPreferredTheme: (theme: string) => void

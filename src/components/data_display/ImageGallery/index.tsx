@@ -34,10 +34,9 @@ const ImageGallery = ({ images }: IProps) => {
       <S.GalleryWrapper>
         {images.map(({ alt, source }: any, i: number) => (
           <S.GalleryImage
-            onClick={() => onToggleModal(i)}
-            role="button"
-            style={{ display: 'inline-block', marginRight: 10, width: '33%' }}
             key={source}
+            role="button"
+            onClick={() => onToggleModal(i)}
             src={source}
             alt={alt || `Image #${i}`}
           />
