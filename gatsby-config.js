@@ -73,17 +73,6 @@ const plugins = [
     },
   },
   {
-    resolve: `gatsby-plugin-algolia-search`,
-    options: {
-      appId: process.env.GATSBY_ALGOLIA_APP_ID,
-      apiKey: process.env.ALGOLIA_ADMIN_KEY,
-      indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
-      queries,
-      chunkSize: 10000, // default: 1000
-      enablePartialUpdates: true,
-    },
-  },
-  {
     resolve: `gatsby-plugin-manifest`,
     options: {
       name: `Lucas Bassetti`,
@@ -147,6 +136,17 @@ const plugins = [
 ]
 
 if (process.env.NODE_ENV === 'production') {
+  const algolia = {
+    resolve: `gatsby-plugin-algolia-search`,
+    options: {
+      appId: process.env.GATSBY_ALGOLIA_APP_ID,
+      apiKey: process.env.ALGOLIA_ADMIN_KEY,
+      queries,
+      chunkSize: 10000, // default: 1000
+      enablePartialUpdates: true,
+    },
+  }
+
   const analytics = {
     resolve: `gatsby-plugin-google-analytics`,
     options: {
@@ -155,6 +155,7 @@ if (process.env.NODE_ENV === 'production') {
     },
   }
 
+  plugins.push(algolia)
   plugins.push(analytics)
 }
 
