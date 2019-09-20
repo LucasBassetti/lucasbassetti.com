@@ -63,7 +63,7 @@ function SEO({
         },
         {
           property: `og:title`,
-          content: title,
+          content: `${title} | ${site.siteMetadata.title}`,
         },
         {
           property: `og:description`,
@@ -75,11 +75,7 @@ function SEO({
         },
         {
           name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:image`,
-          content: ogImage,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
@@ -87,7 +83,7 @@ function SEO({
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: `${title} | ${site.siteMetadata.title}`,
         },
         {
           name: `twitter:description`,
