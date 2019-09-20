@@ -1,4 +1,5 @@
 import React from 'react'
+import { Github } from 'styled-icons/boxicons-logos/Github'
 import ProjectItem from '../ProjectItem'
 import * as S from './styled'
 
@@ -40,7 +41,7 @@ const Projects = ({ projects }: IProps) => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <S.ProjectsGithubIcon size={24} /> Check all
+        <Github size={24} /> Check all
       </S.ProjectsGithubLink>
     </>
   )

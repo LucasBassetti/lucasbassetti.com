@@ -6,13 +6,11 @@ description: A cada dia que passa novos frameworks JavaScript são lançados faz
 tags: ['javascript']
 ---
 
-import ProfileIntro from '@components/data_display/ProfileIntro'
-
-### Introdução
+## Introdução
 
 A cada dia que passa novos frameworks JavaScript são lançados fazendo com que muitas pessoas (inclusive eu) negligenciem conceitos básicos da linguagem. Como parte do meu estudo, resolvi fazer esse "resumão" de alguns conceitos que considero fundamentais para um desenvolvedor JavaScript.
 
-### 1. Escopos
+## 1. Escopos
 
 Escopos em JavaScript são diferentes da maioria das outras linguagens cuja sintaxe é influenciada pela linguagem C. Nessas linguagens, o escopo é delimitado por blocos (geralmente criados por meio de chaves).
 
@@ -29,7 +27,7 @@ console.log(x)
 
 Se você veio de outras linguagens e começou a estudar JavaScript agora, provavelmente vai esperar que o valor resultante seja **_undefined_**. Mas se executarmos o código, o valor resultante será **123**, pois o JavaScript não encerra escopos ao final de blocos.
 
-### 2. Hoisting
+## 2. Hoisting
 
 Vejamos o seguinte exemplo:
 
@@ -58,7 +56,7 @@ function f() {
 f()
 ```
 
-### 3. Invocações
+## 3. Invocações
 
 No JavaScript, há quatro maneiras de invocarmos uma função, onde cada tipo de invocação tem enorme impacto sobre como o código dentro dela opera, principalmente no parâmetro **_this_**. Tais maneiras são:
 
@@ -73,7 +71,7 @@ JavaScript permite que o número de argumentos seja diferente do número de par�
 
 Além disso, todas as invocações de funções também recebem dois parâmetros implícitos: **_arguments_** e **_this_**. Eles podem ser referenciados dentro da função da mesma maneira que qualquer outro parâmetro nomeado explicitamente.
 
-### 4. Closures
+## 4. Closures
 
 Closure é o escopo criado quando a função é declarada que permite a função acessar e manipular variáveis externas a ela. Isso permite que uma função declarada seja chamada a qualquer momento do futuro, mesmo depois de o escopo no qual ela foi declarada ter ido embora.
 
@@ -104,13 +102,11 @@ Clousures abrangem não somente a declaração da função, mas também todas as
 
 Portanto, a closure cria uma espécie de "bolha de segurança" da função e das variáveis que estão em escopo no momento da declaração, de modo que a função tenha tudo que necessite para ser executada.
 
-### 5. Prototype
+## 5. Prototype
 
 Protótipo representa uma forma conveniente de definirmos tipos de objetos. Ele permite definir propriedades e funcionalidades que serão aplicadas as instâncias de objetos. Em outras palavras, protótipos se assemelham a classes em linguagens orientadas a objetos. Quando você usa o **_prototype_**, você permite que todas as instâncias tenham acesso aos métodos criados. Tais instâncias devem ser inicializadas por meio do comando **_new_**,.
 
-### Referências
+## Referências
 
 1. RESIG, John; BIBEAULT, Bear. **Secrets of the JavaScript Ninja**. Manning, 2013.
 2. STEFANOV, Stoyan. **Object-Oriented JavaScript**. Packt Publishing Ltd, 2008.
-
-<ProfileIntro />

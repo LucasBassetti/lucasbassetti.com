@@ -1,10 +1,11 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import educationList from '../../../constants/education_list'
+import educationList from '@constants/education_list'
 import {
   experienceList,
   volunteerExperienceList,
-} from '../../../constants/experience_list'
+} from '@constants/experience_list'
+import ProfileIntro from '../ProfileIntro'
 import EducationItem from '../EducationItem'
 import ExperienceItem from '../ExperienceItem'
 import * as S from './styled'
@@ -108,6 +109,7 @@ const About = () => {
 
   return (
     <S.AboutWrapper>
+      <ProfileIntro full={true} />
       <S.AboutTitle>Education</S.AboutTitle>
       <div>
         {educationList.map(educationItem => (

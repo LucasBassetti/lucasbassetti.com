@@ -13,6 +13,16 @@ const ThemeSwitch = () => {
     window.__onThemeChange = () => setTheme(window.__theme)
   }, [])
 
+  useEffect(() => {
+    if (window.DISQUS !== undefined) {
+      window.setTimeout(() => {
+        window.DISQUS.reset({
+          reload: true,
+        })
+      }, 300)
+    }
+  }, [theme])
+
   return (
     <S.ThemeSwitchWrapper className={isDarkMode ? 'dark' : 'light'}>
       <input

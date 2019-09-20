@@ -42,6 +42,13 @@ export const Subtitle3 = `
   line-height: 1.6rem;
 `
 
+export const Subtitle4 = `
+  color: var(--secondaryColor);
+  font-size: 1rem;
+  letter-spacing: -0.04px;
+  line-height: 1.5rem;
+`
+
 export const Heading1 = `
   color: var(--primaryColor);
   font-size: 2rem;
@@ -92,14 +99,14 @@ export const Heading4 = `
 export const Text1 = `
   font-size: 1.4rem;
   font-weight: 400;
-  letter-spacing: -0.04px;
+  letter-spacing: 0.02rem;
   line-height: 1.8rem;
 `
 
 export const Text2 = `
   font-size: 1.3rem;
   font-weight: 400;
-  letter-spacing: -0.14px;
+  letter-spacing: 0.02rem;
   line-height: 1.7rem;
 `
 

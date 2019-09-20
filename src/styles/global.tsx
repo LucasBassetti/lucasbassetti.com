@@ -118,7 +118,7 @@ const GlobalStyles = createGlobalStyle`
     --bgSolid: ${V.Color.blackSolid};
     --bgSecondary: ${V.Color.grayDark};
     --borderColor: ${V.Color.grayDark};
-    --highlightColor: ${V.Color.blueLight};
+    --highlightColor: ${V.Color.yellow};
     --primaryColor: ${V.Color.white};
     --secondaryColor: ${V.Color.grayLight};
   }
@@ -128,7 +128,7 @@ const GlobalStyles = createGlobalStyle`
     --bgSolid: ${V.Color.grayWhite};
     --bgSecondary: ${V.Color.grayWhite};
     --borderColor: ${V.Color.grayLighter};
-    --highlightColor: ${V.Color.blue};
+    --highlightColor: ${V.Color.orange};
     --primaryColor: ${V.Color.black};
     --secondaryColor: ${V.Color.gray};
   }

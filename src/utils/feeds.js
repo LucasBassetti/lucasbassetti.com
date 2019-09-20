@@ -31,7 +31,7 @@ const feeds = [
       }
     `,
     output: '/feed.xml',
-    title: 'Lucas Bassetti - RSS Feed',
+    title: 'Lucas Bassetti',
   },
 ]
 

@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import { FluidObject } from 'gatsby-image'
 import Layout from '@components/layout/Layout'
 import SEO from '@components/layout/SEO'
-import Post from '@components/data_display/Post'
+import PortfolioPost from '@components/data_display/PortfolioPost'
 
 interface IProps {
   data: {
@@ -27,7 +27,7 @@ interface IProps {
   }
 }
 
-const BlogPost = ({ data }: IProps) => {
+const PortfolioTemplate = ({ data }: IProps) => {
   const post = data.mdx
 
   return (
@@ -37,19 +37,19 @@ const BlogPost = ({ data }: IProps) => {
         description={post.frontmatter.description}
         image={post.frontmatter.image.publicURL}
       />
-      <Post post={post} />
+      <PortfolioPost post={post} />
     </Layout>
   )
 }
 
 export const query = graphql`
-  query Post($slug: String!) {
+  query PortolioItem($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
       fields {
         slug
       }
       frontmatter {
-        date(locale: "en", formatString: "LL")
+        date(locale: "en", formatString: "YYYY")
         description
         tags
         title
@@ -68,4 +68,4 @@ export const query = graphql`
   }
 `
 
-export default BlogPost
+export default PortfolioTemplate

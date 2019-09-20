@@ -1,6 +1,7 @@
 import React from 'react'
 import { getActiveTheme } from '@utils/themes'
 import BoxHandler from '../BoxHandler'
+import Tags from '../Tags'
 import * as S from './styled'
 
 interface IProps {
@@ -31,10 +32,7 @@ const PostItem = ({
         <S.PostItemDate>{`${date} • ${timeToRead} min to read`}</S.PostItemDate>
         <S.PostItemTitle>{title}</S.PostItemTitle>
         <S.PostItemDescription>{description}</S.PostItemDescription>
-        <S.PostItemTags>
-          <S.PostItemTagIcon size={20} />
-          {tags.join(', ')}
-        </S.PostItemTags>
+        <Tags tags={tags} />
       </S.PostItemContent>
     </BoxHandler>
   </S.PostItemWrapper>

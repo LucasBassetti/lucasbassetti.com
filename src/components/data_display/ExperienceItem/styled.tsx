@@ -33,7 +33,7 @@ export const ExperienceItemImage = styled(Img)`
 export const ExperienceItemContent = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 1rem;
+  margin-left: ${V.Space.sm};
   width: 100%;
 
   ${media.lessThan('medium')`

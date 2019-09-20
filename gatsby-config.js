@@ -32,6 +32,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `portfolio`,
+        path: `${__dirname}/content/portfolio`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
@@ -48,6 +55,8 @@ module.exports = {
           },
           `gatsby-remark-lazy-load`,
           `gatsby-remark-prismjs`,
+          `gatsby-plugin-catch-links`,
+          `gatsby-remark-external-links`,
         ],
       },
     },
@@ -67,6 +76,8 @@ module.exports = {
           },
           `gatsby-remark-lazy-load`,
           `gatsby-remark-prismjs`,
+          `gatsby-plugin-catch-links`,
+          `gatsby-remark-external-links`,
         ],
       },
     },
@@ -87,8 +98,8 @@ module.exports = {
         name: `Lucas Bassetti`,
         short_name: `Lucas Bassetti`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#1d1d1d`,
+        theme_color: `#ffffff`,
         display: `minimal-ui`,
         icon: `static/assets/images/icon.png`, // This path is relative to the root of the site.
       },

@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
+import Img from 'gatsby-image'
 
 import * as V from '@styles/variables'
 import * as T from '@styles/typography'
@@ -15,7 +16,7 @@ export const ProfileIntroWrapper = styled.div`
 `
 
 export const ProfileIntroPhoto = styled.div`
-  margin: 0 0 0 1.5rem;
+  margin: 0 ${V.Space.sm} 0;
   max-width: 200px;
   min-width: 200px;
   position: relative;
@@ -36,7 +37,7 @@ export const ProfileIntroPhoto = styled.div`
 `
 
 export const ProfileIntroText = styled.div`
-  margin: 0 0 0 1.5rem;
+  margin: 0;
 
   ${media.lessThan('medium')`
     margin: 2rem 0 0;
@@ -51,6 +52,8 @@ export const ProfileIntroText = styled.div`
 
 export const ProfileIntroName = styled.h1`
   ${T.Title}
+`
 
-  margin-top: 0 !important;
+export const ProfilePeopleImg = styled(Img)`
+  margin-top: ${V.Space.default};
 `

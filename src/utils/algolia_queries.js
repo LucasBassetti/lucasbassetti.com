@@ -1,5 +1,8 @@
 const postQuery = `{
-  posts: allMdx(sort: { fields: frontmatter___date, order: DESC }){
+  posts: allMdx(
+    filter: { fields: { type: { eq: "blog" } } }
+    sort: { fields: frontmatter___date, order: DESC }
+  ) {
     edges {
       node {
         objectID: id

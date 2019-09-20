@@ -5,10 +5,7 @@ description: >-
   package
 date: '2019-09-18 02:16:20'
 image: /assets/gatsby.jpg
-tags:
-  - gatsbyjs
-  - github
-  - javascript
+tags: ['gatsby', 'github', 'javascript']
 ---
 
 ## Introduction
