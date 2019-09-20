@@ -146,7 +146,7 @@ const plugins = [
   `gatsby-plugin-offline`,
 ]
 
-if (process.env.CONTEXT === 'production') {
+if (process.env.NODE_ENV === 'production') {
   const analytics = {
     resolve: `gatsby-plugin-google-analytics`,
     options: {
