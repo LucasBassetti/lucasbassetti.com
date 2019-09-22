@@ -50,6 +50,14 @@ const Header = () => {
     })
   }
 
+  const trackSocialItemClick = (label: string) => {
+    trackEvent({
+      category: 'Social Menu',
+      action: 'click',
+      label: `Social Menu - ${label}`,
+    })
+  }
+
   const Icons = {
     Github,
     LinkedIn,
@@ -99,7 +107,12 @@ const Header = () => {
           const Icon = Icons[label]
 
           return (
-            <S.HeaderSocialLink key={label} href={url} target="_blank">
+            <S.HeaderSocialLink
+              key={label}
+              onClick={() => trackSocialItemClick(label)}
+              href={url}
+              target="_blank"
+            >
               <Icon size={32} />
             </S.HeaderSocialLink>
           )
