@@ -2,7 +2,7 @@
 date: 2017-07-01 00:00:00 -0300
 image: /assets/portfolio/a4pm.jpg
 title: A4PM
-description: A4PM is a Brazilian company that develops projects with focus in Business Intelligence (BI), IT Service Management (ITSM) and IT Infrastructure.
+description: A4PM is a Brazilian company that develops projects focused on Business Intelligence (BI), IT Service Management (ITSM) and IT Infrastructure.
 tags: ['angular', 'pentaho', 'react', 'web']
 url: http://a4pm.com.br
 ---

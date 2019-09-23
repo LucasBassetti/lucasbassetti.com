@@ -9,13 +9,14 @@ tags:
   - react
   - typescript
 ---
+
 ## Introduction
 
 Despite the ups and downs, TypeScript is becoming ever popular each day. You can check in this recent image from [Google Trends](https://trends.google.com/trends/explore?date=today%205-y&geo=US&q=typescript):
 
-![TypeScript - Interest over time](/assets/using-usestate-hook-with-typescript-1.jpg "TypeScript - Interest over time")
+![TypeScript - Interest over time](/assets/using-usestate-hook-with-typescript-1.jpg 'TypeScript - Interest over time')
 
-The same for Hooks after React Hooks introduce it in the version 16.8. Hooks heave formerly “stateless” functional components to [basically everything](https://reactjs.org/docs/hooks-faq.html#do-hooks-cover-all-use-cases-for-classes) traditional class components can be. With a powerful and expressive new way to reuse functionality between components. 
+The same for Hooks after React Hooks introduce it in the version 16.8. Hooks heave formerly “stateless” functional components to [basically everything](https://reactjs.org/docs/hooks-faq.html#do-hooks-cover-all-use-cases-for-classes) traditional class components can be. With a powerful and expressive new way to reuse functionality between components.
 
 One of them and most commonly hook used is the [useState](https://reactjs.org/docs/hooks-reference.html#usestate). In this post we will check the right way to declare types for it.
 
@@ -30,19 +31,15 @@ interface IState {
 
 class MyClass extends React.Component<{}, IState> {
   constructor() {
-    super();
+    super()
 
     this.state = {
-      value: 0
-    };
+      value: 0,
+    }
   }
 
   render() {
-    return(
-      <div>
-        {this.state.value}
-      </div>
-    );
+    return <div>{this.state.value}</div>
   }
 }
 ```
@@ -50,13 +47,13 @@ class MyClass extends React.Component<{}, IState> {
 With addition of useState hook, each state is defined separately, like so:
 
 ```javascript
-const [state, setState] = useState(initialState);
+const [state, setState] = useState(initialState)
 ```
 
 Basically, the `state` is initialized with a `initialState` value and can be updated using the `setState` function. So, if I want define a `count` state I just need to do:
 
 ```javascript
-const [count, setCount] = useState(0);
+const [count, setCount] = useState(0)
 ```
 
 Now comes the question: how can I define a type for this state?
@@ -74,7 +71,7 @@ type Dispatch<A> = (value: A) => void;
 It means that `useState` is using a [Generic](https://www.typescriptlang.org/docs/handbook/generics.html) type variable named S. So, for define the type for our state we just need replace the variable S for the our desire type or interface. Let's back to our count example and add the type `number` for it:
 
 ```javascript
-const [count, setCount] = useState<number>(0);
+const [count, setCount] = useState < number > 0
 ```
 
 This means that the variable S is now a `number`. Replacing it in the `useState` definition we have:

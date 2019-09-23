@@ -2,7 +2,7 @@
 date: 2019-05-01 00:00:00 -0300
 image: /assets/portfolio/dinely.jpg
 title: Dinely
-description: Dinely is revolutionizing American's dining experience and currently launching in Miami, Florida.
+description: Dinely is revolutionizing America’s dining experience and it is currently launching in Miami, Florida.
 tags: ['mobile', 'react', 'react native', 'redux', 'web']
 url: https://dinely.app
 ---

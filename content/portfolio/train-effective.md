@@ -2,7 +2,7 @@
 date: 2018-11-01 00:00:00 -0300
 image: /assets/portfolio/train_effective.jpg
 title: Train Effective
-description: Train Effective is a London based company focused on create an online football academy.
+description: Train Effective is a London-based company focused on creating an online football academy.
 tags: ['firebase', 'mobile', 'react', 'react native', 'redux', 'sql', 'web']
 url: https://traineffective.com
 ---

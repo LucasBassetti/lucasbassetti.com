@@ -37,30 +37,31 @@ const ProfileIntro = ({ full = false }: IProps) => {
         </S.ProfileIntroPhoto>
       )}
       <S.ProfileIntroText>
-        <S.ProfileIntroName>Hi, I'm Lucas!</S.ProfileIntroName>
+        <S.ProfileIntroName>Hi, I am Lucas!</S.ProfileIntroName>
         {full ? (
           <>
             <p>
-              I’m a Mobile and Front-end Developer with 4+ years experience in
+              I am a Mobile and Front-end Developer with 4+ years experience in
               remote work and 8+ years with web technologies. I'm fast-learner
-              that loves open source and discovering new technologies.
+              that loves working with open source and discovering new
+              technologies.
             </p>
             <p>
-              I received my Computer Science Bachelor's degree in 2014 and my
-              Master's degree in 2017 from the Federal University of Espírito
-              Santo (Vitória, Brazil). My graduation Final Project and Master
-              thesis contributed to improve the quality of public data from
-              Brazilian government using semantic interoperability and semantic
-              web techniques. The first one was finalist of a Final Project
-              Award in Bachelor’s Degree of Information Technology Area realized
-              by SINDINFO.
+              I graduated in Computer Science in 2014 and got my Master’s degree
+              in 2017, both by the Universidade Federal do Espírito Santo
+              (UFES). My graduation final project and Master thesis contributed
+              to improve the quality of public data from Brazilian government
+              using semantic interoperability and semantic web techniques. My
+              final project was a finalist at the Final Project Award in
+              Bachelor’s Degree of Information Technology Area by SINDINFO.
             </p>
             <p>
-              Since I started working remotely I passed through companies from
-              US, Brazil, Switzerland and London and worked with different
-              technologies such React, React Native, Redux, TypeScript, Gatsby,
-              NodeJS, Firebase, MeteorJS, MongoDB and MySQL. Currently I'm
-              Front-end Developer at YachtLife, the #1 Yacht Brokerage Company.
+              Since I have started to work remotely, I have been in companies
+              from the USA, Brazil, Switzerland and London and worked with
+              different technologies such as React, React Native, Redux,
+              TypeScript, Gatsby, NodeJS, Firebase, MeteorJS, MongoDB and MySQL.
+              At the moment, I am a Front-end Developer at YachtLife, the #1
+              Yacht Brokerage Company.
             </p>
             <p>
               In 2016, I started contributing to open source projects. My main
@@ -80,7 +81,7 @@ const ProfileIntro = ({ full = false }: IProps) => {
               >
                 React CSS Loaders
               </a>
-              . I’m also a volunteer of{' '}
+              . I am also a volunteer of{' '}
               <a
                 href="https://institutoelevar.com.br"
                 target="_blank"
@@ -88,24 +89,25 @@ const ProfileIntro = ({ full = false }: IProps) => {
               >
                 Instituto Elevar
               </a>
-              , a NGO whose goal is promote and foster the dream of college
-              students who are full of talent and potential, through educational
-              policies and individualized mentorship from global professionals.
+              , an NGO that aims at promoting and fostering the dreams of
+              college students who are full of talent and potential, through
+              educational policies and individualized mentorship from global
+              professionals.
             </p>
             <p>
               In my free times I like travel, watch series, play video-game and,
-              of course, play football (soccer). I cultivate friendship. I have
-              very good friends and I love spend time with them. My two passions
-              are my fiancee Juliana and my cat Simba that loves make pair
-              programming with me 😽.
+              of course, play football (soccer). I cultivate and invest in
+              friendship. I have very good friends and I love spending time with
+              them. My two greatest passions are my fiancee Juliana and my cat
+              Simba, who loves make pair programming with me 😽.
             </p>
             <S.ProfilePeopleImg fluid={aboutImage.childImageSharp.fluid} />
           </>
         ) : (
           <p>
-            I'm a Mobile and Front-end Developer that loves open source and
-            discovering new technologies. I have been working with web since
-            2011. Currently I’m Front-end Developer at{' '}
+            I am a Mobile and Front-end Developer that loves working with open
+            source and discovering new technologies. I have been working with
+            web since 2011. At the moment, I am a Front-end Developer at{' '}
             <a
               href="https://yachtlife.com"
               target="_blank"

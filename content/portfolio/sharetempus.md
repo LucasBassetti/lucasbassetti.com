@@ -2,7 +2,7 @@
 date: 2018-05-01 00:00:00 -0300
 image: /assets/portfolio/sharetempus.jpg
 title: ShareTempus
-description: Share Tempus is an venture-capital ($1Mil+) backed SaaS company providing sharing economy startups transaction-level damage and liability protection through a sophisticated API solution.
+description: Share Tempus is a venture-capital ($1Mil+) backed SaaS company that provides a sharing economy startups transaction-level damage and liability protection through a sophisticated API solution.
 tags:
   ['api', 'meteorjs', 'mongodb', 'nodejs', 'python', 'react', 'redux', 'web']
 url: https://sharetempus.com

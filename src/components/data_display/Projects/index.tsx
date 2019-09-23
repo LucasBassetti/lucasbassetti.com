@@ -23,7 +23,7 @@ const Projects = ({ projects }: IProps) => {
         I <S.ProjectsHeartIcon size={42} /> Open Source
       </S.ProjectsTitle>
       <S.ProjectsDescription>
-        These are some open source projects and experiments that I worked on.
+        Here are some open source projects and experiments that I worked on.
       </S.ProjectsDescription>
       <div>
         {projects.map((project: IProject) => (
