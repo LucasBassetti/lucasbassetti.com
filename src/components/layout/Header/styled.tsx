@@ -5,7 +5,9 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import * as T from '@styles/typography'
 import * as V from '@styles/variables'
 
-export const HeaderWrapper = styled.header`
+export const HeaderWrapper = styled.header.attrs({
+  role: 'banner',
+})`
   align-items: center;
   background: var(--bg);
   border-bottom: 1px solid var(--borderColor);

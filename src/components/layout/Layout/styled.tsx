@@ -3,15 +3,17 @@ import media from 'styled-media-query'
 
 import * as V from '@styles/variables'
 
-export const LayoutWrapper = styled.main`
+export const LayoutWrapper = styled.main.attrs({
+  role: 'main',
+})`
   margin: auto;
   max-width: 800px;
   min-height: 100vh;
-  padding: 4.25rem 1rem;
+  padding: ${V.Space.lg} ${V.Space.xs};
   transition: background-color ${V.Transition.default};
   will-change: background-color;
 
   ${media.lessThan('medium')`
-    padding-top: 7.125rem;
+    padding-top: ${V.Space.xlg};
   `}
 `
