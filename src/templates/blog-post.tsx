@@ -25,12 +25,15 @@ interface IProps {
       body: any
     }
   }
+  pageContext: any
 }
 
-const BlogPost = ({ data }: IProps) => {
+const BlogPost = ({ data, pageContext }: IProps) => {
   const post = data.mdx
+  const next = pageContext.nextPost
+  const previous = pageContext.previousPost
 
-  console.log(post)
+  console.log(pageContext)
 
   return (
     <Layout>
@@ -39,7 +42,7 @@ const BlogPost = ({ data }: IProps) => {
         description={post.frontmatter.description}
         image={post.frontmatter.image.publicURL}
       />
-      <Post post={post} />
+      <Post post={post} next={next} previous={previous} />
     </Layout>
   )
 }

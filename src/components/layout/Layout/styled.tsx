@@ -9,11 +9,11 @@ export const LayoutWrapper = styled.main.attrs({
   margin: auto;
   max-width: 800px;
   min-height: 100vh;
-  padding: ${V.Space.lg} ${V.Space.xs};
+  padding: ${V.Height.headerLg} ${V.Space.xs} ${V.Space.lg};
   transition: background-color ${V.Transition.default};
   will-change: background-color;
 
   ${media.lessThan('medium')`
-    padding-top: ${V.Space.xlg};
+    padding-top: ${V.Height.headerSm};
   `}
 `

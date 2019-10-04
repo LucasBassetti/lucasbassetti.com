@@ -14,7 +14,6 @@ export const PostCoverImage = styled(Img).attrs({
   display: block;
   height: 25vh;
   left: calc(-50vw + 50%);
-  margin-top: -4px;
   object-fit: cover;
   position: relative;
   width: 100vw;

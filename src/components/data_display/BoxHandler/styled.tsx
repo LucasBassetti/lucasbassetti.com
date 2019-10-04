@@ -4,7 +4,6 @@ import * as V from '@styles/variables'
 
 export const BoxHandler = styled.div`
   border: ${V.Border.box};
-  border-radius: ${V.BorderRadius.box};
   color: var(--primaryColor);
   display: block;
   height: 100%;

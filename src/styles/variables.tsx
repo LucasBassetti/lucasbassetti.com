@@ -34,8 +34,10 @@ export const Space: Space = {
 }
 
 export const Height = {
-  headerSm: `${Space.lg}`,
-  headerLg: `${Space.xlg}`,
+  headerLg: `65px`,
+  headerSm: `116px`,
+  // headerSm: `${Space.lg}`,
+  // headerLg: `${Space.xlg}`,
   mainTop: `${Space.md}`,
 }
 
@@ -76,10 +78,6 @@ export const ZIndex = {
 
 export const Transition = {
   default: `.25s`,
-}
-
-export const BorderRadius = {
-  box: `2px`,
 }
 
 export const Border = {

@@ -1,13 +1,9 @@
 ---
-title: Using useState hook with TypeScript
-description: >-
-  If you are new in TypeScript and you are confusing how to use it with the
-  useState hook here is a tip: Is more simple than than imagine.
 date: '2019-09-23 17:32:43'
-image: /assets/react-typescript.jpg
-tags:
-  - react
-  - typescript
+image: /assets/posts/react-typescript.jpg
+title: Using useState hook with TypeScript
+description: "If you are new in TypeScript and you are confusing how to use it with the useState hook here is a tip: Is more simple than you imagine."
+tags: ['react', 'typescript']
 ---
 
 ## Introduction

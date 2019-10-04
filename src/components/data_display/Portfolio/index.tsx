@@ -23,7 +23,7 @@ const Portfolio = ({ portfolio }: IProps) => {
         I <S.PortfolioHeartIcon size={42} /> Work Remotely
       </S.PortfolioTitle>
       <S.PortfolioDescription>
-        These are some of my works done over these 4 years working remotely.
+        Here are some of my works done over these 4 years working remotely.
       </S.PortfolioDescription>
       <div>
         {portfolio.map((item: IPortfolio) => (

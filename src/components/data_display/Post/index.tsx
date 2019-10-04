@@ -2,10 +2,12 @@ import React from 'react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { trackEvent } from '@utils/analytics'
 import { getActiveTheme } from '@utils/themes'
+import Tags from '../Tags'
+import PostNav from '../PostNav'
 import Comments from '../Comments'
 import * as S from './styled'
 
-const Post = ({ post }: any) => {
+const Post = ({ post, next, previous }: any) => {
   const date = new Date(post.frontmatter.date)
   const day = date.getDate() < 10 ? `0${date.getDate()}` : date.getDate()
   const monthIndex = date.getMonth() + 1
@@ -41,6 +43,7 @@ const Post = ({ post }: any) => {
         </S.PostDate>
         <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
         <S.PostDescription>{post.frontmatter.description}</S.PostDescription>
+        {post.frontmatter.tags && <Tags tags={post.frontmatter.tags} />}
       </S.PostHeader>
       <S.MainContent>
         <MDXRenderer>{post.body}</MDXRenderer>
@@ -64,6 +67,7 @@ const Post = ({ post }: any) => {
           </p>
         </S.PostPullRequestWrapper>
       </S.MainContent>
+      <PostNav next={next} previous={previous} />
       <Comments slug={post.fields.slug} title={post.frontmatter.title} />
     </article>
   )

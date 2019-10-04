@@ -7,9 +7,10 @@ import * as S from './styled'
 
 interface IProps {
   date: string
-  description: string
+  description?: string
+  isMini?: boolean
   slug: string
-  tags: string[]
+  tags?: string[]
   timeToRead: number
   title: string
 }
@@ -17,6 +18,7 @@ interface IProps {
 const PostItem = ({
   date,
   description,
+  isMini,
   slug,
   tags,
   timeToRead,
@@ -41,9 +43,11 @@ const PostItem = ({
       <BoxHandler>
         <S.PostItemContent>
           <S.PostItemDate>{`${date} • ${timeToRead} min to read`}</S.PostItemDate>
-          <S.PostItemTitle>{title}</S.PostItemTitle>
-          <S.PostItemDescription>{description}</S.PostItemDescription>
-          <Tags tags={tags} />
+          <S.PostItemTitle isMini={isMini}>{title}</S.PostItemTitle>
+          {description && (
+            <S.PostItemDescription>{description}</S.PostItemDescription>
+          )}
+          {tags && <Tags tags={tags} />}
         </S.PostItemContent>
       </BoxHandler>
     </S.PostItemWrapper>

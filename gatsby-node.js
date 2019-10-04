@@ -69,6 +69,26 @@ exports.createPages = ({ graphql, actions }) => {
                 slug
               }
             }
+            next {
+              frontmatter {
+                date(locale: "en", formatString: "LL")
+                title
+              }
+              fields {
+                slug
+              }
+              timeToRead
+            }
+            previous {
+              fields {
+                slug
+              }
+              frontmatter {
+                date(locale: "en", formatString: "LL")
+                title
+              }
+              timeToRead
+            }
           }
         }
         portfolio: allMdx(
@@ -91,13 +111,15 @@ exports.createPages = ({ graphql, actions }) => {
     }
 
     // Create blog post pages.
-    result.data.posts.edges.forEach(({ node }) => {
+    result.data.posts.edges.forEach(({ node, next, previous }) => {
       createPage({
         // Path for this page — required
         path: `blog/${node.fields.slug}`,
         component: blogPostTemplate,
         context: {
           slug: node.fields.slug,
+          previousPost: next,
+          nextPost: previous,
         },
       })
     })

@@ -24,8 +24,12 @@ export const PostItemDate = styled.time`
   }
 `
 
-export const PostItemTitle = styled.h2`
-  ${T.Heading1}
+interface IPostItemTitle {
+  isMini?: boolean
+}
+
+export const PostItemTitle = styled.h2<IPostItemTitle>`
+  ${props => (props.isMini ? T.Heading3 : T.Heading1)}
 
   margin: ${V.Space.xxs} 0 ${V.Space.xs};
 `
