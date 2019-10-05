@@ -1,7 +1,7 @@
 ---
 title: Useful git commands with Sourcetree GUI
 description: A list of git daily basis commands with Sourcetree GUI
-date: '2019-09-29 20:16:26'
+date: '2019-10-05 03:10:26'
 image: /assets/sourcetree.jpg
 tags:
   - git
