@@ -2,7 +2,7 @@
 title: Useful git commands with Sourcetree GUI
 description: A list of git daily basis commands with Sourcetree GUI
 date: '2019-10-05 03:10:26'
-image: /assets/sourcetree.jpg
+image: /assets/posts/sourcetree.jpg
 tags:
   - git
   - sourcetree
@@ -17,7 +17,7 @@ In this post we will show how to run some git daily basis commands with the Sour
 
 ## Commmands
 
-#### Log
+### Log
 
 Shows the commit logs.
 
@@ -27,7 +27,7 @@ In Sourcetree we can check the log in the **History** tab.
 
 ![Sourcetree history](/assets/useful-git-commands-with-sourcetree-gui-1.jpg "Sourcetree history")
 
-#### Commit
+### Commit
 
 Record changes to the repository
 
@@ -41,7 +41,7 @@ Adding the **amend** option you will replace the tip of the current branch by cr
 
 ![Sourcetree commit amend](/assets/useful-git-commands-with-sourcetree-gui-9.jpg "Sourcetree commit amend")
 
-#### Diff
+### Diff
 
 Show changes between commits, commit and working tree, etc
 
@@ -51,7 +51,7 @@ For doing the same in Sourcetree you just need select 2 commits in the History.
 
 ![Sourcetree diff](/assets/useful-git-commands-with-sourcetree-gui-4.jpg "Sourcetree diff")
 
-#### Stash
+### Stash
 
 Use `git stash` when you want to record the current state of the working directory and the index, but want to go back to a clean working directory. The command saves your local modifications away and reverts the working directory to match the `HEAD` commit.
 
@@ -65,7 +65,7 @@ For apply or delete a stash you can use the **Stashes** menu in the sidebar.
 
 ![Sourcetree stash apply/delete](/assets/useful-git-commands-with-sourcetree-gui-11.jpg "Sourcetree stash apply/delete")
 
-#### Checkout
+### Checkout
 
 Switch branches or restore working tree files
 
@@ -79,13 +79,13 @@ Then you just need add the branch name and confirm.
 
 ![Sourcetree checkout - new branch](/assets/useful-git-commands-with-sourcetree-gui-3.jpg "Sourcetree checkout - new branch")
 
-#### Add Remote
+### Add Remote
 
-Adds a remote named <name> for the repository at <url>.
+Adds a remote named `<name>` for the repository at `<url>`.
 
 `git remote add <name> <url>` ([doc](https://git-scm.com/docs/git-remote))
 
-For adding a remote you need first create a remote repository in some host service like \[Github](https://github.com/) or \[Bitbucket](https://bitbucket.org/). For example, after create a repository on Github you have some like that:
+For adding a remote you need first create a remote repository in some host service like [Github](https://github.com/) or [Bitbucket](https://bitbucket.org/). For example, after create a repository on Github you have some like that:
 
 ![Github new repository](/assets/useful-git-commands-with-sourcetree-gui-7.jpg "Github new repository")
 
@@ -93,11 +93,11 @@ To add this remote in Sourcetree first you need right click on the Workspace men
 
 ![Sourcetree new remote](/assets/useful-git-commands-with-sourcetree-gui-5.jpg "Sourcetree new remote")
 
-Then add the remote **<name>** (usually defined as "origin") and **<url>** in the fields and click in **OK**. That's it. Your new branch is ready.
+Then add the remote `<name>` (usually defined as "origin") and `<url>` in the fields and click in **OK**. That's it. Your new branch is ready.
 
 ![Sourcetree new remote form](/assets/useful-git-commands-with-sourcetree-gui-6.jpg "Sourcetree new remote form")
 
-#### Merge
+### Merge
 
 Join two or more development histories together
 
@@ -111,7 +111,7 @@ If you have some conflict you can also fix it by right clicking in the conflicte
 
 ![Sourcetree resolve conflicts](/assets/useful-git-commands-with-sourcetree-gui-15.jpg "Sourcetree resolve conflicts")
 
-#### Squash
+### Squash
 
 To Squash commits you should use rebase command in interactive mode. Rebasing interactively means that you have a chance to edit the commits which are rebased. You can reorder the commits, and you can remove them (weeding out bad or otherwise unwanted patches).
 
@@ -135,7 +135,7 @@ squash fa1afe1 The oneline of the next commit
 ...
 ```
 
-For squash commits in Sourcetree first you need right click in the commit before that you want and select the option **Rebase children of <commit> interactively...**
+For squash commits in Sourcetree first you need right click in the commit before that you want and select the option `Rebase children of <commit> interactively...`.
 
 ![Sourcetree rebase interactively](/assets/useful-git-commands-with-sourcetree-gui-12.jpg "Sourcetree rebase interactively")
 
