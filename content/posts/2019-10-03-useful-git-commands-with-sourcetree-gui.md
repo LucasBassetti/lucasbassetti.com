@@ -9,9 +9,9 @@ tags:
 ---
 ## Introduction
 
-Remembering many git commands and also doing it in the terminal can be hard if you don't have too much practice. Graphical User Interfaces (GUI's) can make your life easier and improve your productivity. One of that is the Sourcetree.
+Remembering many git commands and also doing it in the terminal can be hard if you don't have too much practice. Graphical User Interfaces (GUI's) can make your life easier and improve your productivity. One of that is the [Sourcetree](https://www.sourcetreeapp.com/).
 
-[Sourcetree](https://www.sourcetreeapp.com/) is a free Git client for Windows and Mac that simplifies how you interact with your Git repositories so you can focus on coding. It enables you visualize and manage your repositories through a simple Git GUI. 
+Sourcetree is a free Git client for Windows and Mac that simplifies how you interact with your Git repositories so you can focus on coding. It enables you visualize and manage your repositories through a simple Git GUI. 
 
 In this post we will show how to run some git daily basis commands with the Sourcetree GUI.
 
@@ -145,6 +145,6 @@ Then select the commits you want squash and confirm. You can also edit the commi
 
 ## Conclusion
 
-In this post we learned some useful git daily commands (like commit, merge, stash, etc.) using the Sourcetree GUI to improve productivity and focus on what matters: coding.
+In this post we learned some useful git daily commands (like commit, merge, stash, etc.) using the Sourcetree GUI. It enables you visualize and manage your repositories improving your productivity and making you focus on what matters: coding.
 
 If you have some suggestion please let me know commenting below or submitting a PR for this post :).
