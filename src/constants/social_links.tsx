@@ -10,7 +10,7 @@ const socialLinks: ISocialLink[] = [
   },
   {
     label: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/lucas-bassetti-67909836/',
+    url: 'https://www.linkedin.com/in/lucas-bassetti/',
   },
   {
     label: 'Instagram',
