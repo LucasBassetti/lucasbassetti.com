@@ -18,6 +18,8 @@ export type Tech =
   | 'Sass'
   | 'SQL'
   | 'TypeScript'
+  | 'NextJS'
+  | 'Jest'
 
 interface IExperienceItem {
   date: string
@@ -41,7 +43,15 @@ export const volunteerExperienceList: IExperienceItem[] = [
 
 export const experienceList: IExperienceItem[] = [
   {
-    date: '2019 - Present',
+    date: '2020 - Present',
+    position: 'Senior Software Engineer',
+    tech: ['NextJS', 'React', 'TypeScript', 'Jest'],
+    company: 'X-Team',
+    companyImageKey: 'xteamImage',
+    companyUrl: 'https://x-team.com',
+  },
+  {
+    date: '2019 - 2020',
     position: 'Front-end Developer',
     tech: ['AWS', 'Less', 'React', 'Redux', 'TypeScript'],
     company: 'YachtLife',

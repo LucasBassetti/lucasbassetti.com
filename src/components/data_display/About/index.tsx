@@ -26,6 +26,7 @@ const About = () => {
     sharetempusImage,
     trainEffectiveImage,
     yachtlifeImage,
+    xteamImage
   } = useStaticQuery(
     graphql`
       fragment squareImage on File {
@@ -90,6 +91,11 @@ const About = () => {
         ) {
           ...squareImage
         }
+        xteamImage: file(
+          relativePath: { eq: "images/experience/xteam.jpg" }
+        ) {
+          ...squareImage
+        }
       }
     `
   )
@@ -107,6 +113,7 @@ const About = () => {
     sharetempusImage: sharetempusImage.childImageSharp.fixed,
     trainEffectiveImage: trainEffectiveImage.childImageSharp.fixed,
     yachtlifeImage: yachtlifeImage.childImageSharp.fixed,
+    xteamImage: xteamImage.childImageSharp.fixed,
   }
 
   return (

@@ -33,8 +33,6 @@ const BlogPost = ({ data, pageContext }: IProps) => {
   const next = pageContext.nextPost
   const previous = pageContext.previousPost
 
-  console.log(pageContext)
-
   return (
     <Layout>
       <SEO

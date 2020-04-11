@@ -41,7 +41,7 @@ const ProfileIntro = ({ full = false }: IProps) => {
         {full ? (
           <>
             <p>
-              I am a Mobile and Front-end Developer with 4+ years experience in
+              I am a Software Engineer with 4+ years experience in
               remote work and 8+ years with web technologies. I'm fast-learner
               that loves working with open source and discovering new
               technologies.
@@ -60,8 +60,7 @@ const ProfileIntro = ({ full = false }: IProps) => {
               from the USA, Brazil, Switzerland and London and worked with
               different technologies such as React, React Native, Redux,
               TypeScript, Gatsby, NodeJS, Firebase, MeteorJS, MongoDB and MySQL.
-              At the moment, I am a Front-end Developer at YachtLife, the #1
-              Yacht Brokerage Company.
+              At the moment, I am a Senior Software Engineer at X-Team.
             </p>
             <p>
               In 2016, I started contributing to open source projects. My main
@@ -105,17 +104,17 @@ const ProfileIntro = ({ full = false }: IProps) => {
           </>
         ) : (
           <p>
-            I am a Mobile and Front-end Developer that loves working with open
+            I am a Software Engineer that loves working with open
             source and discovering new technologies. I have been working with
-            web since 2011. At the moment, I am a Front-end Developer at{' '}
+            web since 2011. At the moment, I am a Senior Software Engineer at{' '}
             <a
-              href="https://yachtlife.com"
+              href="https://x-team.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              YachtLife
+              X-Team
             </a>
-            , the #1 Yacht Brokerage Company.
+            .
           </p>
         )}
       </S.ProfileIntroText>
