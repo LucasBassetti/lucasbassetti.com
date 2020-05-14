@@ -163,8 +163,8 @@ module.exports = {
   siteMetadata: {
     title: `Lucas Bassetti`,
     description:
-      'Front-end Developer passionate about new technologies. Currently work remotely at YachtLife, the #1 Yacht Brokerage Company.',
-    position: 'Front-end Developer',
+      'I am a Software Engineer with 4+ years experience in remote work and 8+ years with web technologies. I am fast-learner that loves working with open source and discovering new technologies. Currently working at X-Team.',
+    position: 'Senior Software Engineer',
     author: `@lucasbassetti`,
     siteUrl: `https://lucasbassetti.com/`,
   },
