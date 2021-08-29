@@ -8,6 +8,15 @@ interface IPublication {
 export const publicationList: IPublication[] = [
   {
     authors:
+      'FONSECA, Claudenir M.; SALES, Tiago P.; VIOLA, Victor; FONSECA, Lucas B. R.; GUIZZARDI, Giancarlo; ALMEIDA, João Paulo A.;',
+    conference: 'FOMI, 2021.',
+    title:
+      'Ontology-Driven Conceptual Modeling as a Service',
+    url:
+      '/assets/pdf/Service_Oriented_Ontology_Engineering_Support.pdf',
+  },
+  {
+    authors:
       'AZEVEDO, DETONI, Archimedes A.; FONSECA, Lucas B. R.; ALMEIDA, João Paulo A.; FALBO, Ricardo de A..',
     conference: 'iSys, 2018.',
     title:
