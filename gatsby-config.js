@@ -163,7 +163,7 @@ module.exports = {
   siteMetadata: {
     title: `Lucas Bassetti`,
     description:
-      'I am a Software Engineer with 4+ years experience in remote work and 8+ years with web technologies. I am fast-learner that loves working with open source and discovering new technologies. Currently working at X-Team.',
+      'I am a Software Engineer with 6+ years experience in remote work and 10+ years with web technologies. I am fast-learner that loves working with open source and discovering new technologies. Currently working at X-Team.',
     position: 'Senior Software Engineer',
     author: `@lucasbassetti`,
     siteUrl: `https://lucasbassetti.com/`,

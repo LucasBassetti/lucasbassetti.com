@@ -41,8 +41,8 @@ const ProfileIntro = ({ full = false }: IProps) => {
         {full ? (
           <>
             <p>
-              I am a Software Engineer with 4+ years experience in
-              remote work and 8+ years with web technologies. I'm fast-learner
+              I am a Software Engineer with 6+ years experience in
+              remote work and 10+ years with web technologies. I'm fast-learner
               that loves working with open source and discovering new
               technologies.
             </p>
@@ -104,7 +104,7 @@ const ProfileIntro = ({ full = false }: IProps) => {
           </>
         ) : (
           <p>
-            I am a Software Engineer with 4+ years experience in remote work and 8+ years with web technologies. I am fast-learner that loves working with open source and discovering new technologies. Currently working at{' '}
+            I am a Software Engineer with 6+ years experience in remote work and 10+ years with web technologies. I am fast-learner that loves working with open source and discovering new technologies. Currently working at{' '}
             <a
               href="https://x-team.com"
               target="_blank"
