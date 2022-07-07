@@ -16,7 +16,7 @@ const Comments = ({ slug, title }: IProps) => {
       <S.CommentsTitle>Comments</S.CommentsTitle>
       <ReactDisqusComments
         shortname="lucasbassetti"
-        identifier={completeURL}
+        identifier={slug}
         title={title}
         url={completeURL}
       />

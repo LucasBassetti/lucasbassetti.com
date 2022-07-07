@@ -68,7 +68,7 @@ const Post = ({ post, next, previous }: any) => {
         </S.PostPullRequestWrapper>
       </S.MainContent>
       <PostNav next={next} previous={previous} />
-      <Comments slug={post.fields.slug} title={post.frontmatter.title} />
+      <Comments key={post.fields.slug} slug={post.fields.slug} title={post.frontmatter.title} />
     </article>
   )
 }
