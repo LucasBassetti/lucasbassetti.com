@@ -51,6 +51,14 @@ export const experienceList: IExperienceItem[] = [
     companyUrl: 'https://x-team.com',
   },
   {
+    date: '2021 - Present',
+    position: 'Senior Software Engineer',
+    tech: ['React', 'TypeScript', 'Jest', 'NodeJS'],
+    company: 'Riot Games',
+    companyImageKey: 'riotImage',
+    companyUrl: 'https://www.riotgames.com/',
+  },
+  {
     date: '2019 - 2020',
     position: 'Front-end Developer',
     tech: ['AWS', 'Less', 'React', 'Redux', 'TypeScript'],
