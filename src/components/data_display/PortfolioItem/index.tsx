@@ -13,6 +13,7 @@ interface IProps {
   slug: string
   tags: string[]
   title: string
+  url?: string
 }
 
 const PortfolioItem = ({
@@ -22,6 +23,7 @@ const PortfolioItem = ({
   slug,
   tags,
   title,
+  url,
 }: IProps) => {
   const trackPortfolioItemClick = () => {
     trackEvent({
@@ -41,10 +43,11 @@ const PortfolioItem = ({
     >
       <BoxHandler>
         <S.PortfolioItemContent>
-          <S.PortfolioItemImg fluid={image} />
+          {image && <S.PortfolioItemImg fluid={image} />}
           <S.PortfolioItemText>
             <S.PortfolioItemDate>{date}</S.PortfolioItemDate>
             <S.PortfolioItemTitle>{title}</S.PortfolioItemTitle>
+            {url && <span>{url}</span>}
             <S.PortfolioItemDescription>
               {description}
             </S.PortfolioItemDescription>

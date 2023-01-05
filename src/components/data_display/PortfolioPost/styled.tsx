@@ -63,8 +63,19 @@ export const PortfolioPostTitle = styled.h1`
   margin: 1rem auto;
 `
 
+export const PortfolioPostUrl = styled.a`
+  ${T.Link}
+
+  display: inline-block;
+  margin-top: 1rem;
+`
+
 export const PortfolioPostDescription = styled.h2`
   ${T.Subtitle2}
+
+  a {
+    ${T.Link}
+  }
 `
 
 export const PortfolioPostDate = styled.p`

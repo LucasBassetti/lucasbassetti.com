@@ -129,7 +129,11 @@ const IndexPage = () => {
             tags={node.frontmatter.tags}
             date={node.frontmatter.date}
             description={node.frontmatter.description}
-            image={node.frontmatter.image.childImageSharp.fluid}
+            image={
+              node.frontmatter.image
+                ? node.frontmatter.image.childImageSharp.fluid
+                : ''
+            }
             slug={node.fields.slug}
             title={node.frontmatter.title}
           />

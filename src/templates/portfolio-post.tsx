@@ -21,6 +21,7 @@ interface IProps {
         tags: string[]
         title: string
         timeToRead: number
+        url: string
       }
       body: any
     }
@@ -53,6 +54,7 @@ export const query = graphql`
         description
         tags
         title
+        url
         image {
           publicURL
           childImageSharp {

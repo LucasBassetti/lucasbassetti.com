@@ -1,10 +1,10 @@
 ---
 date: 2021-04-01 00:00:00 -0300
-image: /assets/portfolio/xteam.jpg
+image: /assets/portfolio/radio.jpg
 title: X-Radio
 description: Listen to curated instrumental music to increase your productivity and focus while coding, programming, working or studying.
 tags: ['react', 'redux', 'firebase', 'typescript', 'redux', 'web']
-url: https://radio.x-team.com/
+url: https://radio.x-team.com
 ---
 
 import ImageGallery from '@components/data_display/ImageGallery'

@@ -10,6 +10,7 @@ interface IPortfolio {
   slug: string
   tags: string[]
   title: string
+  url?: string
 }
 
 interface IProps {
@@ -35,6 +36,7 @@ const Portfolio = ({ portfolio }: IProps) => {
             slug={item.slug}
             tags={item.tags}
             title={item.title}
+            url={item.url}
           />
         ))}
       </div>

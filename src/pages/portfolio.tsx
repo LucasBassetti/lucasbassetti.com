@@ -40,7 +40,9 @@ const PortfolioPage = () => {
   const portfolio = allMdx.edges.map(({ node }: any) => ({
     ...node.fields,
     ...node.frontmatter,
-    image: node.frontmatter.image.childImageSharp.fluid,
+    image: node.frontmatter.image
+      ? node.frontmatter.image.childImageSharp.fluid
+      : '',
   }))
 
   return (
