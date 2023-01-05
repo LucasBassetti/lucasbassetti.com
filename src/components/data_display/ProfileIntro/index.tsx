@@ -41,10 +41,9 @@ const ProfileIntro = ({ full = false }: IProps) => {
         {full ? (
           <>
             <p>
-              I am a Software Engineer with 6+ years experience in
-              remote work and 10+ years with web technologies. I'm fast-learner
-              that loves working with open source and discovering new
-              technologies.
+              I am a Software Engineer with 6+ years experience in remote work
+              and 10+ years with web technologies. I'm fast-learner that loves
+              working with open source and discovering new technologies.
             </p>
             <p>
               I graduated in Computer Science in 2014 and got my Master’s degree
@@ -97,14 +96,17 @@ const ProfileIntro = ({ full = false }: IProps) => {
               In my free times I like travel, watch series, play video-game and,
               of course, play football (soccer). I cultivate and invest in
               friendship. I have very good friends and I love spending time with
-              them. My two greatest passions are my fiancee Juliana and my cat
-              Simba, who loves make pair programming with me 😽.
+              them. My two greatest passions are my wife Juliana and my cats
+              Simba and Nala, who loves make pair programming with me 😽.
             </p>
             <S.ProfilePeopleImg fluid={aboutImage.childImageSharp.fluid} />
           </>
         ) : (
           <p>
-            I am a Software Engineer with 6+ years experience in remote work and 10+ years with web technologies. I am fast-learner that loves working with open source and discovering new technologies. Currently working at{' '}
+            I am a Software Engineer with 6+ years experience in remote work and
+            10+ years with web technologies. I am fast-learner that loves
+            working with open source and discovering new technologies. Currently
+            working at{' '}
             <a
               href="https://x-team.com"
               target="_blank"
