@@ -48,9 +48,9 @@ const PortfolioItem = ({
             <S.PortfolioItemDate>{date}</S.PortfolioItemDate>
             <S.PortfolioItemTitle>{title}</S.PortfolioItemTitle>
             {url && <span>{url}</span>}
-            <S.PortfolioItemDescription>
-              {description}
-            </S.PortfolioItemDescription>
+            <S.PortfolioItemDescription
+              dangerouslySetInnerHTML={{ __html: description }}
+            />
             <Tags tags={tags} />
           </S.PortfolioItemText>
         </S.PortfolioItemContent>
