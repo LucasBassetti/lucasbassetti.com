@@ -103,16 +103,16 @@ const ProfileIntro = ({ full = false }: IProps) => {
           </>
         ) : (
           <p>
-            I am a Software Engineer with 6+ years experience in remote work and
-            10+ years with web technologies. I am fast-learner that loves
+            I am a Software Engineer with 8+ years experience in remote work and
+            12+ years with web technologies. I am fast-learner that loves
             working with open source and discovering new technologies. Currently
             working at{' '}
             <a
-              href="https://x-team.com"
+              href="https://www.scope3.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              X-Team
+              Scope3
             </a>
             .
           </p>
