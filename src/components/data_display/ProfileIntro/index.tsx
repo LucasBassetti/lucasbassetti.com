@@ -93,8 +93,8 @@ const ProfileIntro = ({ full = false }: IProps) => {
               professionals.
             </p>
             <p>
-              In my free times I like travel, watch series, play video-game and,
-              of course, play football (soccer). I cultivate and invest in
+              In my free times I like to watch series, play video-game and, of
+              course, play football (soccer). I cultivate and invest in
               friendship. I have very good friends and I love spending time with
               them. My two greatest passions are my wife Juliana and my cats
               Simba and Nala, who loves make pair programming with me 😽.
