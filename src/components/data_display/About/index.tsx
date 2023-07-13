@@ -28,6 +28,7 @@ const About = () => {
     yachtlifeImage,
     xteamImage,
     riotImage,
+    scope3Image,
   } = useStaticQuery(
     graphql`
       fragment squareImage on File {
@@ -98,6 +99,11 @@ const About = () => {
         riotImage: file(relativePath: { eq: "images/experience/riot.jpg" }) {
           ...squareImage
         }
+        scope3Image: file(
+          relativePath: { eq: "images/experience/scope3.jpg" }
+        ) {
+          ...squareImage
+        }
       }
     `
   )
@@ -117,6 +123,7 @@ const About = () => {
     yachtlifeImage: yachtlifeImage.childImageSharp.fixed,
     xteamImage: xteamImage.childImageSharp.fixed,
     riotImage: riotImage.childImageSharp.fixed,
+    scope3Image: scope3Image.childImageSharp.fixed,
   }
 
   return (

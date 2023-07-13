@@ -47,19 +47,13 @@ const ProfileIntro = ({ full = false }: IProps) => {
             </p>
             <p>
               I graduated in Computer Science in 2014 and got my Master’s degree
-              in 2017, both by the Universidade Federal do Espírito Santo
-              (UFES). My graduation final project and Master thesis contributed
-              to improve the quality of public data from Brazilian government
-              using semantic interoperability and semantic web techniques. My
-              final project was a finalist at the Final Project Award in
-              Bachelor’s Degree of Information Technology Area by SINDINFO.
-            </p>
-            <p>
-              Since I have started to work remotely, I have been in companies
-              from the USA, Brazil, Switzerland and London and worked with
-              different technologies such as React, React Native, Redux,
-              TypeScript, Gatsby, NodeJS, Firebase, MeteorJS, MongoDB and MySQL.
-              At the moment, I am a Senior Software Engineer at X-Team.
+              in 2017, both from the Universidade Federal do Espírito Santo
+              (UFES). And since I started to work remotely, I have been in
+              companies from the USA, Brazil, Switzerland, and London and worked
+              with different technologies such as React, React Native, Redux,
+              TypeScript, NextJS, GraphQL, Gatsby, Tailwind CSS, Material UI,
+              NodeJS, Firebase, MongoDB, and MySQL. At the moment, I am a Senior
+              Frontend Developer at Scope3.
             </p>
             <p>
               In 2016, I started contributing to open source projects. My main

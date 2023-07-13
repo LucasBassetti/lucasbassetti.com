@@ -20,6 +20,7 @@ export type Tech =
   | 'TypeScript'
   | 'NextJS'
   | 'Jest'
+  | 'Tailwind CSS'
 
 interface IExperienceItem {
   date: string
@@ -32,7 +33,7 @@ interface IExperienceItem {
 
 export const volunteerExperienceList: IExperienceItem[] = [
   {
-    date: '2018 - Present',
+    date: '2018 - 2021',
     position: 'Full Stack Developer',
     tech: ['Netlify', 'React'],
     company: 'Instituto Elevar',
@@ -43,7 +44,15 @@ export const volunteerExperienceList: IExperienceItem[] = [
 
 export const experienceList: IExperienceItem[] = [
   {
-    date: '2020 - Present',
+    date: '2023 - Present',
+    position: 'Senior Frontend Developer',
+    tech: ['NextJS', 'React', 'TypeScript', 'Jest', 'GraphQL', 'Tailwind CSS'],
+    company: 'Scope3',
+    companyImageKey: 'scope3Image',
+    companyUrl: 'https://scope3.com',
+  },
+  {
+    date: '2020 - 2023',
     position: 'Senior Software Engineer',
     tech: ['NextJS', 'React', 'TypeScript', 'Jest'],
     company: 'X-Team',
@@ -51,7 +60,7 @@ export const experienceList: IExperienceItem[] = [
     companyUrl: 'https://x-team.com',
   },
   {
-    date: '2021 - Present',
+    date: '2021 - 2023',
     position: 'Senior Software Engineer',
     tech: ['React', 'TypeScript', 'Jest', 'NodeJS'],
     company: 'Riot Games',
@@ -60,7 +69,7 @@ export const experienceList: IExperienceItem[] = [
   },
   {
     date: '2019 - 2020',
-    position: 'Front-end Developer',
+    position: 'Frontend Developer',
     tech: ['AWS', 'Less', 'React', 'Redux', 'TypeScript'],
     company: 'YachtLife',
     companyImageKey: 'yachtlifeImage',
@@ -92,7 +101,7 @@ export const experienceList: IExperienceItem[] = [
   },
   {
     date: '2017 - 2018',
-    position: 'Front-end Developer',
+    position: 'Frontend Developer',
     tech: ['GraphQL', 'Meteor', 'React', 'Redux'],
     company: 'Integration Alpha',
     companyImageKey: 'integrationAlphaImage',
@@ -108,7 +117,7 @@ export const experienceList: IExperienceItem[] = [
   },
   {
     date: '2016 - 2017',
-    position: 'Front-end Developer',
+    position: 'Frontend Developer',
     tech: ['Angular', 'React', 'Redux', 'SQL'],
     company: 'A4PM',
     companyImageKey: 'a4pmImage',
@@ -116,7 +125,7 @@ export const experienceList: IExperienceItem[] = [
   },
   {
     date: '2015 - 2016',
-    position: 'Front-end Developer',
+    position: 'Frontend Developer',
     tech: ['Meteor', 'BlazeJS'],
     company: 'Partio',
     companyImageKey: 'partioImage',
