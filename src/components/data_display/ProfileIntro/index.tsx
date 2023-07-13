@@ -52,8 +52,7 @@ const ProfileIntro = ({ full = false }: IProps) => {
               companies from the USA, Brazil, Switzerland, and London and worked
               with different technologies such as React, React Native, Redux,
               TypeScript, NextJS, GraphQL, Gatsby, Tailwind CSS, Material UI,
-              NodeJS, Firebase, MongoDB, and MySQL. At the moment, I am a Senior
-              Frontend Developer at Scope3.
+              NodeJS, Firebase, MongoDB, and MySQL.
             </p>
             <p>
               In 2016, I started contributing to open source projects. My main
