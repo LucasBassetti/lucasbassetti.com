@@ -41,9 +41,9 @@ const ProfileIntro = ({ full = false }: IProps) => {
         {full ? (
           <>
             <p>
-              I am a Software Engineer with 6+ years experience in remote work
-              and 10+ years with web technologies. I'm fast-learner that loves
-              working with open source and discovering new technologies.
+              I am a Software Engineer with 8+ years of experience in remote
+              work and 12+ years with web technologies. I am a fast learner that
+              loves working with open source and discovering new technologies.
             </p>
             <p>
               I graduated in Computer Science in 2014 and got my Master’s degree
@@ -72,18 +72,10 @@ const ProfileIntro = ({ full = false }: IProps) => {
               >
                 React CSS Loaders
               </a>
-              . I am also a volunteer of{' '}
-              <a
-                href="https://institutoelevar.com.br"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Instituto Elevar
-              </a>
-              , an NGO that aims at promoting and fostering the dreams of
-              college students who are full of talent and potential, through
-              educational policies and individualized mentorship from global
-              professionals.
+              . I am also worked as volunteer of Instituto Elevar, an NGO that
+              aims at promoting and fostering the dream of college students who
+              are full of talent and potential, through educational policies and
+              individualized mentorship from global professionals.
             </p>
             <p>
               In my free times I like to watch series, play video-game and, of
